@@ -1,0 +1,396 @@
+  /* 1. Global Reset Mechanics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* 2. Soft Pastel Blue Canvas Layout with Subtle Matrix Grid Lines */
+        body {
+            background-color: #eaf3fc;
+            background-image: 
+                radial-gradient(circle at center, #f4f9fe 0%, #eaf3fc 80%),
+                linear-gradient(rgba(202, 222, 245, 0.25) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(202, 222, 245, 0.25) 1px, transparent 1px);
+            background-size: 100% 100%, 28px 28px, 28px 28px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* 3. Central Glass Container Card Frame with Large Ambient Glow Bloom */
+        .glass-panel {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 
+                0 15px 35px rgba(144, 183, 227, 0.2), 
+                0 20px 40px rgba(140, 175, 214, 0.25),
+                0 0 1px rgba(90, 130, 180, 0.4),
+                0 0 60px rgba(184, 212, 245, 0.5);
+            padding: 70px 60px;
+            width: 100%;
+            max-width: 680px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            min-height: 440px;
+        }
+
+        /* 4. Single Page Architecture Switcher Engine */
+        .view {
+            display: none;
+            opacity: 0;
+            transform: translateY(12px);
+            width: 100%;
+        }
+
+        .view.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* 5. Custom Interactive Gaming Grid Menu Toggle Button */
+        .menu-grid-btn {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            width: 46px;
+            height: 48px;
+            background-color: #0c2340;
+            border: 2.5px solid #cce3fd;
+            border-radius: 10px;
+            cursor: pointer;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            padding: 8px;
+            box-shadow: 0 4px 14px rgba(12, 35, 64, 0.15);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 10;
+        }
+
+        .grid-row-top {
+            display: flex;
+            gap: 4px;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .grid-pixel {
+            width: 8px;
+            height: 8px;
+            background-color: #ffffff;
+            border-radius: 1px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .grid-pixel-bottom {
+            width: 8px;
+            height: 8px;
+            background-color: #ffffff;
+            border-radius: 1px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .menu-grid-btn:hover, .menu-grid-btn.active-toggle {
+            background-color: #3b82f6;
+            border-color: #ffffff;
+            transform: scale(1.08);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .menu-grid-btn:hover .grid-row-top,
+        .menu-grid-btn.active-toggle .grid-row-top {
+            transform: translate(6px, 0);
+        }
+
+        .menu-grid-btn:hover .grid-pixel-bottom,
+        .menu-grid-btn.active-toggle .grid-pixel-bottom {
+            transform: translate(-12px, -12px);
+        }
+
+        /* 6. Dynamic Overlaid Menu Engine with Hover Underline Expanders */
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0d1e33;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #ffffff;
+            font-size: 2.2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            opacity: 0.7;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .close-btn:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .nav-item-wrap {
+            position: relative;
+            padding-bottom: 6px;
+        }
+
+        .nav-link {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            text-decoration: none;
+        }
+
+        .nav-item-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: #a9cbed;
+            transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), left 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            border-radius: 2px;
+        }
+
+        .nav-item-wrap:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .nav-item-wrap:hover .nav-link {
+            color: #a9cbed;
+        }
+
+        h2.section-title {
+            color: #1a365d;
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-align: left;
+            padding-right: 50px;
+        }
+
+        .title-divider {
+            height: 3px;
+            width: 80px;
+            background: #a9cbed;
+            border-radius: 2px;
+            margin-bottom: 25px;
+        }
+
+        p.body-text {
+            color: #4a5568;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p.left-body-text {
+            color: #4a5568;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .divider-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+            width: 120px;
+        }
+
+        .divider-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .role-badge {
+            background-color: #e2eefc;
+            color: #1a365d;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center; /* <-- Add this line right here! */
+}
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            width: 100%;
+            clear: both;
+        }
+
+        .btn-dark {
+            background-color: #0c2340;
+            color: #ffffff;
+            border: none;
+            padding: 15px 36px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 15px rgba(12, 35, 64, 0.25);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-transform: uppercase;
+        }
+
+        .btn-dark:hover {
+            background-color: #14355e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(12, 35, 64, 0.35);
+        }
+
+        .about-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 35px;
+            padding: 0;
+        }
+
+        .about-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 20px;
+            color: #4a5568;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .about-list li::before {
+            content: "•";
+            color: #a9cbed;
+            font-size: 1.6rem;
+            position: absolute;
+            left: 5px;
+            top: -3px;
+        }
+
+        .about-list strong {
+            color: #1e293b;
+        }
+
+        /* 8. Interactive Skills Grid Theme */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: flex-start;
+        }
+
+        .skill-pill {
+            background-color: #ffffff;
+            color: #1e293b;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #edf2f7;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .skill-pill:hover {
+            background-color: #3b82f6;
+            color: #ffffff;
+            border-color: #3b82f6;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .contacts-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 15px; 
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .glass-panel { padding: 50px 25px; }
+            h1.main-title { font-size: 2rem; }
+            .menu-grid-btn { top: 20px; right: 20px; }
+
+            .btn-container {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
+            margin-top: 20px !important;
+        }
+
+            .btn-container a,
+            .btn-container .btn-dark {
+                display: inline-flex !important;
+                margin: 0 auto !important;
+                text-align: center !important;
+            }
+            
+            .view p, .view li, .glass-panel p, p {
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                hyphens: auto !important;
+                -webkit-hyphens: auto !important;
+                -ms-hyphens: auto !important;
+                word-break: break-word !important;
+            }
+        }
