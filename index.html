@@ -510,15 +510,15 @@
     <div class="projects-container" style="display: flex; gap: 30px; margin-top: 20px; align-items: flex-start;">
         
         <!-- Left Side: Modern Bold Bullet List Menu Index -->
-        <ul style="list-style: none; padding: 0; margin: 0; min-width: 200px; display: flex; flex-direction: column; gap: 15px; user-select: none;">
+        <ul style="list-style: none; padding: 0; margin: 0; min-width: 200px; display: flex; flex-direction: column; gap: 16px; user-select: none; padding-top: 15px;">
             <!-- Menu Item 1: Capstone -->
-            <li class="proj-link active" onclick="switchProject('capstone', event)" style="cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 10px; font-size: 1.05rem; transition: color 0.2s;">
-                <span class="proj-bullet" style="color: #39ff14; font-size: 1.3rem; line-height: 1;">•</span> Capstone Project
-            </li>
+                 <li class="proj-link active" onclick="switchProject('capstone', event)" style="cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
+                     <span class="proj-bullet" style="color: #a9cbed; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Capstone Project
+                 </li>
             <!-- Menu Item 2: Coraline Personal Project -->
-            <li class="proj-link" onclick="switchProject('coraline', event)" style="cursor: pointer; font-weight: 700; color: #64748b; display: flex; align-items: center; gap: 10px; font-size: 1.05rem; transition: color 0.2s;">
-                <span class="proj-bullet" style="color: #cbd5e1; font-size: 1.3rem; line-height: 1;">•</span> Personal Project
-            </li>
+                <li class="proj-link" onclick="switchProject('coraline', event)" style="cursor: pointer; font-weight: 700; color: #64748b; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
+                    <span class="proj-bullet" style="color: #cbd5e1; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Personal Project
+                </li>
         </ul>
 
         <!-- Right Side: Dynamic Content Frame Hub Display Wrapper -->
@@ -685,7 +685,7 @@
     }
 
     // 🟢 PASTED DIRECTLY HERE: Dynamic Project Content Tab Switcher Routine
-    function switchProject(projectId, event) {
+function switchProject(projectId, event) {
         // 1. Hide all individual project view panels
         document.querySelectorAll('.project-content-view').forEach(panel => {
             panel.style.display = 'none';
@@ -704,12 +704,12 @@
             targetPanel.style.display = 'block';
         }
 
-        // 4. Highlight the active clicked title and turn its bullet bright green
+        // 4. Highlight the active clicked title and turn its bullet soft pastel blue
         const clickedItem = event.currentTarget;
         clickedItem.style.color = '#1a365d'; // Deep active blue text
         const activeBullet = clickedItem.querySelector('.proj-bullet');
         if (activeBullet) {
-            activeBullet.style.color = '#39ff14'; // Bright green bullet node
+            activeBullet.style.color = '#a9cbed'; // 🟢 SOFT PASTEL BLUE ACTIVE NODE COLOR!
         }
     }
 </script>
