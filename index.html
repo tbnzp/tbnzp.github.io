@@ -520,110 +520,112 @@
         </div>
 
         <!-- Tab Panel 4: Projects View Layout -->
-<div id="projects-view" class="view">
-    <h2 class="section-title">Projects</h2>
-    <div class="title-divider"></div>
-    
-    <!-- Unified Side-Menu Projects Framework Row Layout -->
-    <div class="projects-container" style="display: flex; gap: 30px; margin-top: 20px; align-items: flex-start;">
+        <div id="projects-view" class="view">
+            <h2 class="section-title">Projects</h2>
+            <div class="title-divider"></div>
+
+            <!-- Unified Side-Menu Projects Framework Row Layout -->
+            <div class="projects-container" style="display: flex; gap: 30px; margin-top: 20px; align-items: flex-start;">
         
-        <!-- Left Side: Modern Bold Bullet List Menu Index -->
-        <ul style="list-style: none; padding: 0; margin: 0; min-width: 200px; display: flex; flex-direction: column; gap: 16px; user-select: none; padding-top: 15px;">
-            <!-- Menu Item 1: Capstone Project -->
-            <li class="proj-link active" onclick="switchProject('capstone', event)" style="cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
-                <span class="proj-bullet" style="font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Capstone Project
-            </li>
-            <!-- Menu Item 2: Coraline Personal Project -->
-                <li class="proj-link" onclick="switchProject('coraline', event)" style="cursor: pointer; font-weight: 700; color: #64748b; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
-                    <span class="proj-bullet" style="font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Personal Project
-                </li>
+                <!-- Left Side: Modern Bold Bullet List Menu Index -->
+                <ul style="list-style: none; padding: 0; margin: 0; min-width: 200px; display: flex; flex-direction: column; gap: 16px; user-select: none; padding-top: 15px;">
+
+                    <!-- Menu Item 1: Capstone Project -->
+                    <li class="proj-link active" onclick="switchProject('capstone', event)" style="list-style: none !important; cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
+                        <span class="proj-bullet" style="color: #a9cbed; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Capstone Project
+                    </li>
+                    
+                    <!-- Menu Item 2: Coraline Personal Project -->
+                    <li class="proj-link" onclick="switchProject('coraline', event)" style="list-style: none !important; cursor: pointer; font-weight: 700; color: #64748b; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
+                        <span class="proj-bullet" style="color: #cbd5e1; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Personal Project
+                    </li>
         </ul>
-
-        <!-- Right Side: Dynamic Content Frame Hub Display Wrapper -->
-        <div class="project-display-panel" style="flex: 1; width: 100%;">
-            
-            <!-- VIEW CARD A: CAPSTONE PROJECT (Visible by Default) -->
-            <div id="proj-capstone" class="project-content-view" style="display: block;">
-                <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
-                    <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
-                        🎓 Capstone Project
-                    </span>
-                    
-                    <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
-                        PREPLUS: An Online Gym Information System with Forecasting Technology for Fitness Academy – Malabon
-                    </h3>
-                    
-                    <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
-                        ⭐ Project Leader
-                    </p>
-                    
-                    <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; word-break: break-word;">
-                        Led a collaborative development team throughout the deployment of a structural information system. Coordinated project timelines, assigned tasks, designed database entity structures, and reviewed code quality to help the team achieve a successful system defense evaluation.
-                    </p>
-
-                    <ul class="about-list" style="margin-bottom: 25px;">
-                        <li><strong>Front-End Development:</strong> Developed the front-end interface of the web-based information system.</li>
-                        <li><strong>Technical Documentation:</strong> Prepared and managed the project's technical documentation, including the thesis manuscript and system documentation.</li>
-                        <li><strong>Team Collaboration:</strong> Collaborated with team members throughout the development, testing, and presentation phases.</li>
-                    </ul>
-
-                    <!-- Capstone Screenshot Grid Layout -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; width: 100%; margin-top: 15px;">
-                        <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center;">
-                            <img src="PREPLUS ONE.png" alt="Home Page" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
-                            <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Home Page</span>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- Closes Card A -->
-
-            <!-- VIEW CARD B: CORALINE PERSONAL PROJECT (Hidden by Default) -->
-            <div id="proj-coraline" class="project-content-view" style="display: none;">
-                <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
-                    <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
-                        🎨 Personal Project
-                    </span>
-                    
-                    <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
-                        IP-Themed Interactive Website
-                    </h3>
-                    
-                    <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
-                        ⭐ Personal Design & Front-End Development
-                    </p>
-            
-                    <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; word-break: break-word;">
-                        Designed and developed a custom single-page interactive website inspired by the film Coraline as a personalized digital gift. Developed a five-level riddle challenge using conditional logic to unlock content sequentially and implemented a dynamic photo slideshow, delivering an immersive and interactive user experience.
-                    </p>
-                    
-                    <ul class="about-list" style="margin-bottom: 25px;">
-                        <li><strong>Interactive Mini-Games:</strong> Developed a five-level text-matching game that progressively unlocked sections of the application based on user input.</li>
-                        <li><strong>Digital Scrapbook Gallery:</strong> Created a responsive image gallery with a multi-page sliding interface for displaying custom photo collections.</li>
-                        <li><strong>Custom UI Design:</strong> Designed and implemented a dark-themed user interface with custom typography, refined font styling, and clean border elements to enhance the overall user experience.</li>
-                    </ul>
-                    
-                    <!-- CORALINE IMAGE DISPLAY SCREENSHOT -->
-                    <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center; max-width: 100%; margin-top: 15px;">
-                        <img src="home page.png" alt="Coraline Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
-                        <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coraline Themed Home Page</span>
-                    </div>
-                </div>
-            </div> <!-- Closes Card B -->
-
-        </div> <!-- Closes .project-display-panel -->
-    </div> <!-- Closes .projects-container -->
-</div> <!-- Closes #projects-view layer safely -->
-            
-            <!-- Tab Panel 5: Skills View Layout -->
-            <div id="skills-view" class="view">
-                <h2 class="section-title">Skills</h2>
-                <div class="title-divider"></div>
                 
-                <p class="left-body-text" style="color: #4a5568; text-align: justify; text-justify: inter-word; margin-bottom: 25px;">
-                    Every skill listed here represents a step in my learning journey, from my time as a student to my professional experience and personal exploration. Technology is constantly evolving, and so am I. This section will be updated from time to time as I continue to broaden my knowledge, develop new skills, and apply what I learn to real-world challenges.
-                </p>
+                <!-- Right Side: Dynamic Content Frame Hub Display Wrapper -->
+                <div class="project-display-panel" style="flex: 1; width: 100%;">
+                    
+                    <!-- VIEW CARD A: CAPSTONE PROJECT (Visible by Default) -->
+                    <div id="proj-capstone" class="project-content-view" style="display: block;">
+                        <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
+                            <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
+                                🎓 Capstone Project
+                            </span>
+                            
+                            <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
+                                PREPLUS: An Online Gym Information System with Forecasting Technology for Fitness Academy – Malabon
+                            </h3>
+                
+                            <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
+                                ⭐ Project Leader
+                            </p>
+                    
+                            <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; word-break: break-word;">
+                                Led a collaborative development team throughout the deployment of a structural information system. Coordinated project timelines, assigned tasks, designed database entity structures, and reviewed code quality to help the team achieve a successful system defense evaluation.
+                            </p>
 
-                <div class="skills-grid" style="justify-content: center; max-width: 100%;">
+                            <ul class="about-list" style="margin-bottom: 25px;">
+                                <li><strong>Front-End Development:</strong> Developed the front-end interface of the web-based information system.</li>
+                                <li><strong>Technical Documentation:</strong> Prepared and managed the project's technical documentation, including the thesis manuscript and system documentation.</li>
+                                <li><strong>Team Collaboration:</strong> Collaborated with team members throughout the development, testing, and presentation phases.</li>
+                            </ul>
+
+                            <!-- Capstone Screenshot Grid Layout -->
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; width: 100%; margin-top: 15px;">
+                                <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center;">
+                                    <img src="PREPLUS ONE.png" alt="Home Page" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
+                                    <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Home Page</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Closes Card A -->
+                    
+                    <!-- VIEW CARD B: CORALINE PERSONAL PROJECT (Hidden by Default) -->
+                    <div id="proj-coraline" class="project-content-view" style="display: none;">
+                        <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
+                            <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
+                                🎨 Personal Project
+                            </span>
+                    
+                            <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
+                                IP-Themed Interactive Website
+                            </h3>
+                            
+                            <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
+                                ⭐ Personal Design & Front-End Development
+                            </p>
+                            
+                            <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; word-break: break-word;">
+                                Designed and developed a custom single-page interactive website inspired by the film Coraline as a personalized digital gift. Developed a five-level riddle challenge using conditional logic to unlock content sequentially and implemented a dynamic photo slideshow, delivering an immersive and interactive user experience.
+                            </p>
+                    
+                            <ul class="about-list" style="margin-bottom: 25px;">
+                                <li><strong>Interactive Mini-Games:</strong> Developed a five-level text-matching game that progressively unlocked sections of the application based on user input.</li>
+                                <li><strong>Digital Scrapbook Gallery:</strong> Created a responsive image gallery with a multi-page sliding interface for displaying custom photo collections.</li>
+                                <li><strong>Custom UI Design:</strong> Designed and implemented a dark-themed user interface with custom typography, refined font styling, and clean border elements to enhance the overall user experience.</li>
+                            </ul>
+                    
+                            <!-- CORALINE IMAGE DISPLAY SCREENSHOT -->
+                            <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center; max-width: 100%; margin-top: 15px;">
+                                <img src="home page.png" alt="Coraline Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
+                                <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coraline Themed Home Page</span>
+                            </div>
+                        </div>
+                    </div> <!-- Closes Card B -->
+
+                </div> <!-- Closes .project-display-panel -->
+            </div> <!-- Closes .projects-container -->
+        </div> <!-- Closes #projects-view layer safely -->
+            
+        <!-- Tab Panel 5: Skills View Layout -->
+        <div id="skills-view" class="view">
+            <h2 class="section-title">Skills</h2>
+            <div class="title-divider"></div>
+                
+            <p class="left-body-text" style="color: #4a5568; text-align: justify; text-justify: inter-word; margin-bottom: 25px;">
+                Every skill listed here represents a step in my learning journey, from my time as a student to my professional experience and personal exploration. Technology is constantly evolving, and so am I. This section will be updated from time to time as I continue to broaden my knowledge, develop new skills, and apply what I learn to real-world challenges.
+            </p>
+
+            <div class="skills-grid" style="justify-content: center; max-width: 100%;">
                     <div class="skill-pill">Technical Support</div>
                     <div class="skill-pill">Data Entry</div>
                     <div class="skill-pill">Data Management</div>
@@ -640,93 +642,99 @@
             </div>
             
             <!-- Tab Panel 6: Contacts View Layout -->
-            <div id="contacts-view" class="view">
-                <h2 class="section-title">Contacts</h2>
-                <div class="title-divider"></div>
+        <div id="contacts-view" class="view">
+            <h2 class="section-title">Contacts</h2>
+            <div class="title-divider"></div>
         
-                <p class="left-body-text" style="font-weight: 600; color: #1a365d; margin-bottom: 25px;">
-                    Hire me? Let's get connected! Feel free to reach me on these channels below:
-                </p>
+            <p class="left-body-text" style="font-weight: 600; color: #1a365d; margin-bottom: 25px;">
+                Hire me? Let's get connected! Feel free to reach me on these channels below:
+            </p>
             
-                <div class="contacts-grid">
-                    <a href="PORMOCILLE 2026.pdf" download="Callasandra_M_Pormocille_Resume.pdf" class="skill-pill" style="text-decoration: none; display: inline-block;">📄 Download CV (PDF)</a>
-                    <a href="mailto:clsndrh@gmail.com" class="skill-pill" style="text-decoration: none; display: inline-block;">✉️ clsndrh@gmail.com</a>
-                    <a href="tel:+639202976170" class="skill-pill" style="text-decoration: none; display: inline-block;">📞 +63 920 297 6170</a>
-                    <a href="https://www.linkedin.com/in/tbnzp/" class="skill-pill" target="_blank" style="text-decoration: none; display: inline-block;">🔗 LinkedIn Profile</a>
-                </div>
-            </div> <!-- Closes your contacts-grid -->
+            <div class="contacts-grid">
+                <a href="PORMOCILLE 2026.pdf" download="Callasandra_M_Pormocille_Resume.pdf" class="skill-pill" style="text-decoration: none; display: inline-block;">📄 Download CV (PDF)</a>
+                <a href="mailto:clsndrh@gmail.com" class="skill-pill" style="text-decoration: none; display: inline-block;">✉️ clsndrh@gmail.com</a>
+                <a href="tel:+639202976170" class="skill-pill" style="text-decoration: none; display: inline-block;">📞 +63 920 297 6170</a>
+                <a href="https://www.linkedin.com/in/tbnzp/" class="skill-pill" target="_blank" style="text-decoration: none; display: inline-block;">🔗 LinkedIn Profile</a>   
+            </div>
+        </div> <!-- Closes your contacts-grid -->
     </div> <!-- Closes your #contacts-view panel safely --> 
     
-    <!-- Elegant External Footer Label (With absolute centering rules applied directly to it) -->
+        <!-- Elegant External Footer Label (With absolute centering rules applied directly to it) -->
         <p style="display: block; width: fit-content; max-width: 90%; margin: 30px auto 0 auto; text-align: center; color: #0c3866; font-size: 0.85rem; font-weight: 600; opacity: 0.75; letter-spacing: 0.5px; pointer-events: none; clear: both; box-sizing: border-box;">
             © 2026 Callasandra Pormocille. All Rights Reserved.
         </p>
     
     </div> <!-- Closes your .glass-panel container card perfectly -->
     
-                <!-- Single Page Front-End Controller Script Engine -->
-<script>
-    function toggleMenu(isOpen) {
-        const overlay = document.getElementById('navMenu');
-        const globalMenuBtn = document.getElementById('globalMenuBtn');
-        
-        if (isOpen) {
-            overlay.classList.add('active');
-            globalMenuBtn.classList.add('active-toggle'); 
-        } else {
-            overlay.classList.remove('active');
-            globalMenuBtn.classList.remove('active-toggle'); 
-        }
-    }
-
-    function navigateTo(targetViewId) {
-        toggleMenu(false); 
-        
-        const views = document.querySelectorAll('.view');
-        views.forEach(v => {
-            v.classList.remove('active');
-        });
-        
-        setTimeout(() => {
-            const target = document.getElementById(targetViewId);
-            if (target) {
-                target.classList.add('active');
-            }
-            
+    <!-- Single Page Front-End Controller Script Engine -->
+    <script>
+        function toggleMenu(isOpen) {
+            const overlay = document.getElementById('navMenu');
             const globalMenuBtn = document.getElementById('globalMenuBtn');
-            if (targetViewId === 'home-view') {
-                globalMenuBtn.style.display = 'none'; 
+            
+            if (isOpen) {
+                overlay.classList.add('active');
+                globalMenuBtn.classList.add('active-toggle'); 
             } else {
-                globalMenuBtn.style.display = 'flex'; 
+                overlay.classList.remove('active');
+                globalMenuBtn.classList.remove('active-toggle'); 
             }
-        }, 100);
-    }
-
-    // 🟢 PASTED DIRECTLY HERE: Dynamic Project Content Tab Switcher Routine
-    function switchProject(projectId, event) {
-        // 1. Hide all individual project view panels
-        document.querySelectorAll('.project-content-view').forEach(panel => {
-            panel.style.display = 'none';
-        });
-
-        // 2. Remove active highlighting from all menu items
-        document.querySelectorAll('.proj-link').forEach(link => {
-            link.classList.remove('active');
-            link.style.color = '#64748b'; // Resets inactive text color
-        });
-
-        // 3. Reveal the selected project display panel card
-        const targetPanel = document.getElementById(`proj-${projectId}`);
-        if (targetPanel) {
-            targetPanel.style.display = 'block';
         }
 
-        // 4. Activate the clicked item to instantly switch text and bullet colors
-        const clickedItem = event.currentTarget;
-        clickedItem.classList.add('active');
-        clickedItem.style.color = '#1a365d'; // Sets active text color
-    }
-</script>
+        function navigateTo(targetViewId) {
+            toggleMenu(false); 
+            
+            const views = document.querySelectorAll('.view');
+            views.forEach(v => {
+                v.classList.remove('active');
+            });
+        
+            setTimeout(() => {
+                const target = document.getElementById(targetViewId);
+                if (target) {
+                    target.classList.add('active');
+                }
+            
+                const globalMenuBtn = document.getElementById('globalMenuBtn');
+                if (targetViewId === 'home-view') {
+                    globalMenuBtn.style.display = 'none'; 
+                } else {
+                    globalMenuBtn.style.display = 'flex'; 
+                }
+            }, 100);
+        }
+        
+        // 🟢 PASTED DIRECTLY HERE: Dynamic Project Content Tab Switcher Routine
+        function switchProject(projectId, event) {
+            // 1. Hide all individual project view panels
+            document.querySelectorAll('.project-content-view').forEach(panel => {
+                panel.style.display = 'none';
+            });
+            
+            // 2. Reset all menu text items and bullet colors back to inactive grey
+            document.querySelectorAll('.proj-link').forEach(link => {
+                link.style.color = '#64748b'; // Inactive grey text
+                const bullet = link.querySelector('.proj-bullet');
+                if (bullet) {
+                    bullet.style.setProperty('color', '#cbd5e1', 'important'); // Inactive grey bullet
+                }
+            });
+
+            // 3. Reveal the selected project display panel card
+            const targetPanel = document.getElementById(`proj-${projectId}`);
+            if (targetPanel) {
+                targetPanel.style.display = 'block';
+            }
+
+            // 4. Highlight active text dark blue and active bullet pastel blue
+            const clickedItem = event.currentTarget;
+            clickedItem.style.color = '#1a365d'; // Active dark blue text
+            const activeBullet = clickedItem.querySelector('.proj-bullet');
+            if (activeBullet) {
+                activeBullet.style.setProperty('color', '#a9cbed', 'important'); // 🟢 Active Soft Pastel Blue!
+            }
+        }
+    </script>
 </div>
 </body>
 </html>
