@@ -634,30 +634,33 @@
                     globalMenuBtn.classList.remove('active-toggle'); 
                 }
             }
-            function navigateTo(targetViewId) {
-                toggleMenu(false); 
+        
+        function navigateTo(targetViewId) {
+            toggleMenu(false); 
+            
+            const views = document.querySelectorAll('.view');
+            views.forEach(v => {
+                v.classList.remove('active');
+            });
+            
+            // SAVE ACTIVE VIEW SLOT TO BROWSER MEMORY
+            localStorage.setItem('portfolio_activeTab', targetViewId);
+            
+            setTimeout(() => {
+                const target = document.getElementById(targetViewId);
+                if (target) {
+                    target.classList.add('active');
+                }
                 
-                const views = document.querySelectorAll('.view');
-                views.forEach(v => {
-                    v.classList.remove('active');
-                });
-                
-                // This is the specific line that was missing before!
-                setTimeout(() => {
-                    const target = document.getElementById(targetViewId);
-                    if (target) {
-                        target.classList.add('active');
-                    }
-                    
-                    const globalMenuBtn = document.getElementById('globalMenuBtn');
-                    if (targetViewId === 'home-view') {
-                        globalMenuBtn.style.display = 'none'; 
-                    } else {
-                        globalMenuBtn.style.display = 'flex'; 
-                    }
-                }, 100);
-            }
-        </script>
+                const globalMenuBtn = document.getElementById('globalMenuBtn');
+                if (targetViewId === 'home-view') {
+                    globalMenuBtn.style.display = 'none'; 
+                } else {
+                    globalMenuBtn.style.display = 'flex'; 
+                }
+            }, 100);
+        }
+    </script>
 </div>
 </body>
 </html>
