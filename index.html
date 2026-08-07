@@ -660,6 +660,19 @@
                 }
             }, 100);
         }
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            // Read the last visited tab name from browser memory drawers
+            const lastSavedTab = localStorage.getItem('portfolio_activeTab');
+            
+            // If a saved state exists, snap right back to it instantly!
+            if (lastSavedTab) {
+                navigateTo(lastSavedTab);
+            } else {
+                // Fallback default navigation onto your clean home view landing screen
+                navigateTo('home-view');
+            }
+        });
     </script>
 </div>
 </body>
