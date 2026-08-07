@@ -528,18 +528,18 @@
             <div class="projects-container" style="display: flex; gap: 30px; margin-top: 20px; align-items: flex-start;">
         
                 <!-- Left Side: Modern Bold Bullet List Menu Index -->
-                <ul style="list-style: none; padding: 0; margin: 0; min-width: 200px; display: flex; flex-direction: column; gap: 16px; user-select: none; padding-top: 15px;">
-
-                    <!-- Menu Item 1: Capstone Project -->
-                    <li class="proj-link active" onclick="switchProject('capstone', event)" style="list-style: none !important; cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
+                <ul style="list-style: none !important; list-style-type: none !important; padding: 0; margin: 0; min-width: 200px; display: flex; flex-direction: column; gap: 16px; user-select: none; padding-top: 15px;">
+                    
+                    <!-- Menu Item 1: Capstone -->
+                    <li class="proj-link" onclick="switchProject('capstone', this)" style="cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
                         <span class="proj-bullet" style="color: #a9cbed; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Capstone Project
                     </li>
                     
                     <!-- Menu Item 2: Coraline Personal Project -->
-                    <li class="proj-link" onclick="switchProject('coraline', event)" style="list-style: none !important; cursor: pointer; font-weight: 700; color: #64748b; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
+                    <li class="proj-link" onclick="switchProject('coraline', this)" style="cursor: pointer; font-weight: 700; color: #64748b; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
                         <span class="proj-bullet" style="color: #cbd5e1; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Personal Project
                     </li>
-        </ul>
+                </ul>
                 
                 <!-- Right Side: Dynamic Content Frame Hub Display Wrapper -->
                 <div class="project-display-panel" style="flex: 1; width: 100%;">
@@ -705,35 +705,37 @@
         }
         
         // 🟢 PASTED DIRECTLY HERE: Dynamic Project Content Tab Switcher Routine
-        function switchProject(projectId, event) {
-            // 1. Hide all individual project view panels
+        function switchProject(projectId, clickedElement) {
+            // 1. Hide all individual project view content panels
             document.querySelectorAll('.project-content-view').forEach(panel => {
                 panel.style.display = 'none';
             });
-            
-            // 2. Reset all menu text items and bullet colors back to inactive grey
+
+            // 2. Reset all menu text items and bullet colors back to inactive grey states
             document.querySelectorAll('.proj-link').forEach(link => {
                 link.style.color = '#64748b'; // Inactive grey text
                 const bullet = link.querySelector('.proj-bullet');
                 if (bullet) {
-                    bullet.style.setProperty('color', '#cbd5e1', 'important'); // Inactive grey bullet
+                    bullet.style.color = '#cbd5e1'; // Inactive grey bullet
                 }
             });
 
-            // 3. Reveal the selected project display panel card
+            // 3. Reveal the specific selected project display panel card
             const targetPanel = document.getElementById(`proj-${projectId}`);
             if (targetPanel) {
                 targetPanel.style.display = 'block';
             }
 
-            // 4. Highlight active text dark blue and active bullet pastel blue
-            const clickedItem = event.currentTarget;
-            clickedItem.style.color = '#1a365d'; // Active dark blue text
-            const activeBullet = clickedItem.querySelector('.proj-bullet');
-            if (activeBullet) {
-                activeBullet.style.setProperty('color', '#a9cbed', 'important'); // 🟢 Active Soft Pastel Blue!
+            // 4. Highlight active clicked text dark blue and active bullet pastel blue
+            if (clickedElement) {
+                clickedElement.style.color = '#1a365d'; // Active dark blue text
+                const activeBullet = clickedElement.querySelector('.proj-bullet');
+                if (activeBullet) {
+                    activeBullet.style.color = '#a9cbed'; // Active soft pastel blue bullet
+                }
             }
         }
+
     </script>
 </div>
 </body>
