@@ -694,17 +694,16 @@
     }
 
     // 🟢 PASTED DIRECTLY HERE: Dynamic Project Content Tab Switcher Routine
-function switchProject(projectId, event) {
+    function switchProject(projectId, event) {
         // 1. Hide all individual project view panels
         document.querySelectorAll('.project-content-view').forEach(panel => {
             panel.style.display = 'none';
         });
 
-        // 2. Reset all menu text items back to inactive state styling
+        // 2. Remove active highlighting from all menu items
         document.querySelectorAll('.proj-link').forEach(link => {
-            link.style.color = '#64748b'; // Dim grey text
-            const bullet = link.querySelector('.proj-bullet');
-            if (bullet) bullet.style.color = '#cbd5e1'; // Dim grey bullet node
+            link.classList.remove('active');
+            link.style.color = '#64748b'; // Resets inactive text color
         });
 
         // 3. Reveal the selected project display panel card
@@ -713,13 +712,10 @@ function switchProject(projectId, event) {
             targetPanel.style.display = 'block';
         }
 
-        // 4. Highlight the active clicked title and turn its bullet soft pastel blue
+        // 4. Activate the clicked item to instantly switch text and bullet colors
         const clickedItem = event.currentTarget;
-        clickedItem.style.color = '#1a365d'; // Deep active blue text
-        const activeBullet = clickedItem.querySelector('.proj-bullet');
-        if (activeBullet) {
-            activeBullet.style.color = '#a9cbed'; // 🟢 SOFT PASTEL BLUE ACTIVE NODE COLOR!
-        }
+        clickedItem.classList.add('active');
+        clickedItem.style.color = '#1a365d'; // Sets active text color
     }
 </script>
 </div>
