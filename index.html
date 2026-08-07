@@ -523,43 +523,43 @@
         <div id="projects-view" class="view">
             <h2 class="section-title">Projects</h2>
             <div class="title-divider"></div>
-
-            <!-- Unified Side-Menu Projects Framework Row Layout -->
+            
+            <!-- Dynamic Split Layout: Links on Left, Display on Right -->
             <div class="projects-container" style="display: flex; gap: 30px; margin-top: 20px; align-items: flex-start;">
         
-                <!-- Left Side: Modern Bold Bullet List Menu Index -->
+                <!-- Left Side Bar Links Menu -->
                 <ul style="list-style: none !important; list-style-type: none !important; padding: 0; margin: 0; min-width: 200px; display: flex; flex-direction: column; gap: 16px; user-select: none; padding-top: 15px;">
-                    
-                    <!-- Menu Item 1: Capstone -->
+            
+                    <!-- Link 1: Capstone -->
                     <li class="proj-link" onclick="switchProject('capstone', this)" style="cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
                         <span class="proj-bullet" style="color: #a9cbed; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Capstone Project
                     </li>
                     
-                    <!-- Menu Item 2: Coraline Personal Project -->
+                    <!-- Link 2: Personal Project -->
                     <li class="proj-link" onclick="switchProject('coraline', this)" style="cursor: pointer; font-weight: 700; color: #64748b; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
                         <span class="proj-bullet" style="color: #cbd5e1; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Personal Project
                     </li>
                 </ul>
-                
-                <!-- Right Side: Dynamic Content Frame Hub Display Wrapper -->
+
+                <!-- Right Side Dynamic Display Hub Panel -->
                 <div class="project-display-panel" style="flex: 1; width: 100%;">
-                    
-                    <!-- VIEW CARD A: CAPSTONE PROJECT (Visible by Default) -->
+            
+                    <!-- 🟢 PROJECT CARD A: PREPLUS CAPSTONE (Visible by Default) -->
                     <div id="proj-capstone" class="project-content-view" style="display: block;">
                         <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
                             <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
                                 🎓 Capstone Project
                             </span>
-                            
+                    
                             <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
                                 PREPLUS: An Online Gym Information System with Forecasting Technology for Fitness Academy – Malabon
                             </h3>
-                
+                    
                             <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
                                 ⭐ Project Leader
                             </p>
                     
-                            <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; word-break: break-word;">
+                            <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
                                 Led a collaborative development team throughout the deployment of a structural information system. Coordinated project timelines, assigned tasks, designed database entity structures, and reviewed code quality to help the team achieve a successful system defense evaluation.
                             </p>
 
@@ -569,7 +569,7 @@
                                 <li><strong>Team Collaboration:</strong> Collaborated with team members throughout the development, testing, and presentation phases.</li>
                             </ul>
 
-                            <!-- Capstone Screenshot Grid Layout -->
+                            <!-- Capstone Screenshot Frame -->
                             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; width: 100%; margin-top: 15px;">
                                 <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center;">
                                     <img src="PREPLUS ONE.png" alt="Home Page" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
@@ -577,9 +577,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- Closes Card A -->
+                    </div>
                     
-                    <!-- VIEW CARD B: CORALINE PERSONAL PROJECT (Hidden by Default) -->
+                    <!-- 🟢 PROJECT CARD B: CORALINE PERSONAL (Hidden by Default) -->
                     <div id="proj-coraline" class="project-content-view" style="display: none;">
                         <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
                             <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
@@ -589,13 +589,13 @@
                             <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
                                 IP-Themed Interactive Website
                             </h3>
-                            
+                    
                             <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
                                 ⭐ Personal Design & Front-End Development
                             </p>
-                            
-                            <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; word-break: break-word;">
-                                Designed and developed a custom single-page interactive website inspired by the film Coraline as a personalized digital gift. Developed a five-level riddle challenge using conditional logic to unlock content sequentially and implemented a dynamic photo slideshow, delivering an immersive and interactive user experience.
+            
+                            <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
+                        Designed and developed a custom single-page interactive website inspired by the film Coraline as a personalized digital gift. Developed a five-level riddle challenge using conditional logic to unlock content sequentially and implemented a dynamic photo slideshow, delivering an immersive and interactive user experience.
                             </p>
                     
                             <ul class="about-list" style="margin-bottom: 25px;">
@@ -603,19 +603,18 @@
                                 <li><strong>Digital Scrapbook Gallery:</strong> Created a responsive image gallery with a multi-page sliding interface for displaying custom photo collections.</li>
                                 <li><strong>Custom UI Design:</strong> Designed and implemented a dark-themed user interface with custom typography, refined font styling, and clean border elements to enhance the overall user experience.</li>
                             </ul>
-                    
-                            <!-- CORALINE IMAGE DISPLAY SCREENSHOT -->
+                            
+                            <!-- Coraline Screenshot Frame -->
                             <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center; max-width: 100%; margin-top: 15px;">
                                 <img src="home page.png" alt="Coraline Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
                                 <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coraline Themed Home Page</span>
                             </div>
                         </div>
-                    </div> <!-- Closes Card B -->
-
-                </div> <!-- Closes .project-display-panel -->
-            </div> <!-- Closes .projects-container -->
-        </div> <!-- Closes #projects-view layer safely -->
-            
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- Tab Panel 5: Skills View Layout -->
         <div id="skills-view" class="view">
             <h2 class="section-title">Skills</h2>
