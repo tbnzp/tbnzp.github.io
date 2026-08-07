@@ -407,6 +407,15 @@
                 -ms-hyphens: auto !important;
                 word-break: break-word !important;
             }
+            
+            .proj-link .proj-bullet {
+                color: #cbd5e1 !important;
+            }
+            
+            /* Active state color rules (Forces the active link bullet to turn Soft Pastel Blue) */
+            .proj-link.active .proj-bullet {
+                color: #a9cbed !important;
+            }
         }
     </style>
 </head>
@@ -511,13 +520,13 @@
         
         <!-- Left Side: Modern Bold Bullet List Menu Index -->
         <ul style="list-style: none; padding: 0; margin: 0; min-width: 200px; display: flex; flex-direction: column; gap: 16px; user-select: none; padding-top: 15px;">
-            <!-- Menu Item 1: Capstone -->
-                 <li class="proj-link active" onclick="switchProject('capstone', event)" style="cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
-                     <span class="proj-bullet" style="color: #a9cbed; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Capstone Project
-                 </li>
+            <!-- Menu Item 1: Capstone Project -->
+            <li class="proj-link active" onclick="switchProject('capstone', event)" style="cursor: pointer; font-weight: 700; color: #1a365d; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
+                <span class="proj-bullet" style="font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Capstone Project
+            </li>
             <!-- Menu Item 2: Coraline Personal Project -->
                 <li class="proj-link" onclick="switchProject('coraline', event)" style="cursor: pointer; font-weight: 700; color: #64748b; display: flex; align-items: center; gap: 12px; font-size: 1.05rem; transition: all 0.2s;">
-                    <span class="proj-bullet" style="color: #cbd5e1; font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Personal Project
+                    <span class="proj-bullet" style="font-size: 1.5rem; line-height: 1; transition: color 0.2s;">•</span> Personal Project
                 </li>
         </ul>
 
