@@ -637,59 +637,89 @@
         </footer>
         
                 <!-- Single Page Front-End Controller Script Engine -->
-    <script>
-        function toggleMenu(isOpen) {
+        <script>
+            // 1. Global Tab Panel Navigation Manager
+            function toggleMenu(isOpen) {
                 const overlay = document.getElementById('navMenu');
                 const globalMenuBtn = document.getElementById('globalMenuBtn');
-                
-                if (isOpen) {
-                    overlay.classList.add('active');
-                    globalMenuBtn.classList.add('active-toggle'); 
-                } else {
-                    overlay.classList.remove('active');
-                    globalMenuBtn.classList.remove('active-toggle'); 
+    
+                if (overlay && globalMenuBtn) {
+                    if (isOpen) {
+                        overlay.classList.add('active');
+                        globalMenuBtn.classList.add('active-toggle'); 
+                    } else {
+                        overlay.classList.remove('active');
+                        globalMenuBtn.classList.remove('active-toggle'); 
+                    }
                 }
             }
+
+            // Routes content switching across dashboard tabs safely
+            function navigateTo(targetViewId) {
+                toggleMenu(false); 
+    
+                const views = document.querySelectorAll('.view');
+                views.forEach(v => {
+                    v.classList.remove('active');
+                    // Resets display properly so tabs can load
+                    v.style.setProperty('display', '', 'important');
+                });
+    
+                localStorage.setItem('portfolio_activeTab', targetViewId);
+                setTimeout(() => {
+                    const target = document.getElementById(targetViewId);
+                    if (target) {
+                        target.classList.add('active');
+                    }
         
-        function navigateTo(targetViewId) {
-            toggleMenu(false); 
-            
-            const views = document.querySelectorAll('.view');
-            views.forEach(v => {
-                v.classList.remove('active');
-            });
-            
-            // SAVE ACTIVE VIEW SLOT TO BROWSER MEMORY
-            localStorage.setItem('portfolio_activeTab', targetViewId);
-            
-            setTimeout(() => {
-                const target = document.getElementById(targetViewId);
-                if (target) {
-                    target.classList.add('active');
-                }
-                
-                const globalMenuBtn = document.getElementById('globalMenuBtn');
-                if (targetViewId === 'home-view') {
-                    globalMenuBtn.style.display = 'none'; 
-                } else {
-                    globalMenuBtn.style.display = 'flex'; 
-                }
-            }, 100);
-        }
-        
-        window.addEventListener('DOMContentLoaded', () => {
-            // Read the last visited tab name from browser memory drawers
-            const lastSavedTab = localStorage.getItem('portfolio_activeTab');
-            
-            // If a saved state exists, snap right back to it instantly!
-            if (lastSavedTab) {
-                navigateTo(lastSavedTab);
-            } else {
-                // Fallback default navigation onto your clean home view landing screen
-                navigateTo('home-view');
+                    const globalMenuBtn = document.getElementById('globalMenuBtn');
+                    if (globalMenuBtn) {
+                        globalMenuBtn.style.display = (targetViewId === 'home-view') ? 'none' : 'flex';
+                    }
+                }, 100);
             }
-        });
-    </script>
-</div>
+
+            // 2. Project Sliding Engine (SAFE FROM BREAKING BLANK VIEWS)
+            let activeSlideIndex = 1; 
+            const maxTotalSlides = 3;
+
+            function rotateProjectCardSlide(directionStep) {
+                activeSlideIndex += directionStep;
+    
+                if (activeSlideIndex < 1) activeSlideIndex = maxTotalSlides;
+                if (activeSlideIndex > maxTotalSlides) activeSlideIndex = 1;
+    
+                for (let i = 1; i <= maxTotalSlides; i++) {
+                    const targetCardNode = document.getElementById(`project-card-${i}`);
+                    if (targetCardNode) {
+                        if (i === activeSlideIndex) {
+                            targetCardNode.style.setProperty('display', 'block', 'important');
+                        } else {
+                            targetCardNode.style.setProperty('display', 'none', 'important');
+                        }
+                    }
+                }
+            }
+
+            // --- MASTER LIFECYCLE HOOK BINDINGS PROCESS ---
+            window.addEventListener('DOMContentLoaded', () => {
+                // Safely sets up project slides ONLY if they exist on the current page view
+                for (let i = 1; i <= maxTotalSlides; i++) {
+                    const targetCardNode = document.getElementById(`project-card-${i}`);
+                    if (targetCardNode) {
+                        targetCardNode.style.setProperty('display', (i === 1) ? 'block' : 'none', 'important');
+                    }
+                }
+
+                // Fetch last-saved persistent tab snapshot from browser drawers memory keys
+                const lastSavedTab = localStorage.getItem('portfolio_activeTab');
+                if (lastSavedTab) {
+                    navigateTo(lastSavedTab);
+                } else {
+                    navigateTo('home-view');
+                }
+            });       
+        </script>
+    </div>
 </body>
 </html>
