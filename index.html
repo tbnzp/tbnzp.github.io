@@ -406,333 +406,274 @@
                 -webkit-hyphens: auto !important;
                 -ms-hyphens: auto !important;
                 word-break: break-word !important;
-                
-                .skills-grid, .contacts-grid, .skill-pill {
-                    text-align: center !important;
-                    display: flex !important;
-                    justify-content: center !important;
-                    flex-wrap: wrap !important;
-                }
-
-                #skills-view div, #contacts-view div, #contacts-view p {
-                    text-align: center !important;
-                }
             }
         }
     </style>
 </head>
-    
-    <body> 
-        <!-- Fullscreen Menu Overlaid Layout Screen -->
-        <div id="navMenu" class="nav-overlay">
-            <button class="close-btn" onclick="toggleMenu(false)">×</button>
-            <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('home-view')">Home</button></div>
-            <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('about-view')">About</button></div>
-            <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('experience-view')">Experience</button></div>
-            <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('projects-view')">Projects</button></div>
-            <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('skills-view')">Skills</button></div>
-            <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('contacts-view')">Contacts</button></div>
-        </div>
+<body>
 
-        <!-- Central Interactive Workspace Container Frame -->
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; width: 100%; padding: 20px 0;">
-            <div class="glass-panel">
+    <!-- Fullscreen Menu Overlaid Layout Screen -->
+    <div id="navMenu" class="nav-overlay">
+        <button class="close-btn" onclick="toggleMenu(false)">×</button>
+        <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('home-view')">Home</button></div>
+        <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('about-view')">About</button></div>
+        <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('experience-view')">Experience</button></div>
+        <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('projects-view')">Projects</button></div>
+        <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('skills-view')">Skills</button></div>
+        <div class="nav-item-wrap"><button class="nav-link" onclick="navigateTo('contacts-view')">Contacts</button></div>
+    </div>
 
-                <!-- Custom Interactive Morphing Grid Button Assembly -->
-                <button id="globalMenuBtn" class="menu-grid-btn" onclick="toggleMenu(true)" title="Open Menu">
-                    <div class="grid-row-top">
-                        <div class="grid-pixel"></div>
-                        <div class="grid-pixel"></div>
-                    </div>
-                    <div class="grid-pixel-bottom"></div>
-                </button>
+    <!-- Central Interactive Workspace Container Frame -->
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; width: 100%; padding: 20px 0;">
+    <div class="glass-panel">
 
-                <!-- Tab Panel 1: Home View Layout -->
-                <div id="home-view" class="view active">
-                    <h1 class="main-title" style="text-align: center; width: 100%; color: #0c3866;">Callasandra M. Pormocille</h1>
-            
-                    <div class="divider-container">
-                        <div class="divider-line"></div>
-                        <div class="divider-dot"></div>
-                        <div class="divider-line"></div>
-                    </div>
-            
-                    <div class="divider-container">
-                        <span class="role-badge">IT Support Specialist | Data Entry Specialist</span>
-                    </div>
-
-                    <p class="body-text" style="text-align: justify; text-justify: inter-word; color: #0c3866;">
-                        Hi, I am <strong>Callasandra</strong> and welcome to my little sanctuary. :) Here, you can explore everything you’d like to know about me by navigating through the About Me, Experience, Skills, Projects, and Contact sections.
-                    </p>
-
-                    <div class="btn-container">
-                        <button class="btn-dark" onclick="navigateTo('about-view')">
-                            <span style="font-size: 1.25rem; line-height: 1;">🎮</span> PRESS START
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Tab Panel 2: About Me View Layout -->
-                <div id="about-view" class="view">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="title-divider"></div>
-            
-                    <p class="left-body-text" style="text-align: justify; text-justify: inter-word;">
-                        I am an IT graduate with over a year of hands-on experience in technical support, hardware troubleshooting, warranty operations, and IT-related administrative tasks. I also have experience in troubleshooting computer-related issues, providing technical support, and managing business data with accuracy and efficiency.
-                    </p>
-            
-                    <ul class="about-list">
-                        <li style="text-align: justify; text-justify: inter-word; color: #0c3866;"><strong>Technical Infrastructure Support:</strong> Experienced in component diagnostics, peripheral hardware troubleshooting, and managing authorized manufacturer warranty systems.</li>
-                        <li style="text-align: justify; text-justify: inter-word; color: #0c3866;"><strong>Data & Records Management:</strong> Experienced in organizing digital records, maintaining databases, and ensuring data accuracy and integrity through careful encoding and verification.</li>
-                        <li style="text-align: justify; text-justify: inter-word; color: #0c3866;"><strong>Professional Drivers:</strong> I am passionate about exploring new technologies, expanding my technical knowledge, and sharing what I learn with others. As I continue to grow in the IT field, I hope to apply my skills to develop practical solutions that make a meaningful impact.</li>
-                    </ul>
-                    
-                    <div class="btn-container">
-                        <a href="PORMOCILLE 2026.pdf" download="CALLASANDRA PORMOCILLE - RESUME.pdf" class="btn-dark" style="text-decoration: none;">
-                            <span style="font-size: 1.15rem; line-height: 1;">📄 Download My CV</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Tab Panel 3: Experience View Layout -->
-                <div id="experience-view" class="view">
-                    <h2 class="section-title">Experience</h2>
-                    <div class="title-divider"></div>
-  
-                    <div style="margin-bottom: 30px; text-align: left;">
-                        <h3 style="color: #1a365d; font-size: 1.25rem; font-weight: 700; margin-bottom: 4px;">Administrative Technical Support</h3>
-                        <p style="color: #3b82f6; font-size: 1rem; font-weight: 600; margin-bottom: 8px;">MATCO Computer Corporation <span style="color: #64748b; font-weight: 400; margin-left: 5px;">| June 2025 - Present</span></p>
-                        <p class="left-body-text" style="margin-bottom: 0; text-align: justify; text-justify: inter-word;">Contributed to the successful development and maintenance of the company’s website as part of a collaborative team, ensuring functionality, usability, and timely updates. Managed the EPSON Warranty Parts CRM Portal, supporting day to day operations by maintaining accurate records, monitoring portal functionality, and ensuring efficient processing and management of warranty parts information.
-                        </p>
-                    </div>
-
-                    <div style="margin-bottom: 10px; text-align: left;">
-                        <h3 style="color: #1a365d; font-size: 1.25rem; font-weight: 700; margin-bottom: 4px;">Data Entry Specialist</h3>
-                        <p style="color: #3b82f6; font-size: 1rem; font-weight: 600; margin-bottom: 8px;">Gateway Group of Companies <span style="color: #64748b; font-weight: 400; margin-left: 5px;">| March 2023 - September 2024</span></p>
-                        <p class="left-body-text" style="margin-bottom: 0; text-align: justify; text-justify: inter-word;">Managed and maintained customer records by accurately encoding, updating, and verifying data to ensure accuracy and integrity. Provided timely customer support, resolved enquiries, and coordinated with internal teams to deliver efficient service. Improved workflow through organised record management and attention to detail while utilising database and Microsoft Office applications.</p>
-                        <p style="color: #10b981; font-size: 0.95rem; font-weight: 600;">🏆 Recognised as one of the Top Performers on the team for two consecutive months.</p>
-                    </div>
-                </div>
-        
-                <!-- Tab Panel 4: Projects View Layout -->
-                <div id="projects-view" class="view">
-                    <h2 class="section-title">Projects</h2>
-                    <div class="title-divider"></div>
-    
-                    <!-- CARD CONTAINER 1: CAPSTONE PROJECT (Visible on Load) -->
-                    <div id="project-card-1" style="display: block; text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
-                        <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
-                            🎓 Capstone Project
-                        </span>
-                
-                        <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
-                            PREPLUS: An Online Gym Information System with Forecasting Technology for Fitness Academy – Malabon
-                        </h3>
-                        <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
-                            ⭐ Project Leader
-                        </p>
-        
-                        <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
-                            Led a collaborative development team throughout the deployment of a structural information system. Coordinated project timelines, assigned tasks, designed database entity structures, and reviewed code quality to help the team achieve a successful system defense evaluation.
-                        </p>
-
-                        <ul class="about-list" style="margin-bottom: 25px;">
-                            <li><strong>Front-End Development:</strong> Developed the front-end interface of the web-based information system.</li>
-                            <li><strong>Technical Documentation:</strong> Prepared and managed the project's technical documentation, including the thesis manuscript and system documentation.</li>
-                            <li><strong>Team Collaboration:</strong> Collaborated with team members throughout the development, testing, and presentation phases.</li>
-                        </ul>
-
-                        <!-- Capstone Screenshot Grid Layout -->
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; width: 100%; margin-top: 15px;">
-                            <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center;">
-                                <img src="PREPLUS ONE.png" alt="Home Page" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
-                                <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Home Page</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CARD CONTAINER 2: CORALINE DIGITAL APP (Hidden on Load) -->
-                    <div id="project-card-2" style="display: none; text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
-                        <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
-                            🎨 Personal Project
-                        </span>
-        
-                        <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
-                            IP-Themed Interactive Website
-                        </h3>         
-                        <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
-                            ⭐ Personal Design & Front-End Development
-                        </p>
-            
-                        <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
-                            Designed and developed a custom single-page interactive website inspired by the film Coraline as a personalized digital gift. Developed a five-level riddle challenge using conditional logic to unlock content sequentially and implemented a dynamic photo slideshow, delivering an immersive and interactive user experience.
-                        </p>
-        
-                        <ul class="about-list" style="margin-bottom: 25px;">
-                            <li><strong>Interactive Mini-Games:</strong> Developed a five-level text-matching game that progressively unlocked sections of the application based on user input.</li>
-                            <li><strong>Digital Scrapbook Gallery:</strong> Created a responsive image gallery with a multi-page sliding interface for displaying custom photo collections.</li>
-                            <li><strong>Custom UI Design:</strong> Designed and implemented a dark-themed user interface with custom typography, refined font styling, and clean border elements to enhance the overall user experience.</li>
-                        </ul>
-        
-                        <!-- CORALINE IMAGE DISPLAY SCREENSHOT -->
-                        <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center; max-width: 100%; margin-top: 15px;">
-                            <img src="home page.png" alt="Coraline Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
-                            <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coraline Themed Home Page</span>
-                        </div>
-                    </div>
-
-                    <!-- HIGH-UTILITY CHEVRON BUTTON ROW PANEL (Dark Navy Theme) -->
-                    <div class="project-nav-control-bar" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 35px; user-select: none;">
-        
-                        <!-- BACK BUTTON: Dark navy squircle with a clean black border outline -->
-                        <button id="prevProjectBtn" 
-                            onclick="document.getElementById('project-card-1').style.setProperty('display', 'block', 'important'); document.getElementById('project-card-2').style.setProperty('display', 'none', 'important');" 
-                            style="background-color: #0b2240; border: 2px solid #000000; width: 50px; height: 50px; border-radius: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
-                            <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; color: #ffffff; transform: rotate(180deg);"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </button>
-        
-                        <!-- NEXT BUTTON: Solid dark navy squircle with a smooth drop shadow -->
-                        <button id="nextProjectBtn" 
-                            onclick="document.getElementById('project-card-1').style.setProperty('display', 'none', 'important'); document.getElementById('project-card-2').style.setProperty('display', 'block', 'important');" 
-                            style="background-color: #0b2240; border: none; width: 50px; height: 50px; border-radius: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(11, 34, 64, 0.35);">
-                            <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; color: #ffffff;"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </button>
-                    </div>
-            
-                    <!-- Tab Panel 5: Skills View Layout -->
-                    <div id="skills-view" class="view">
-                        <h2 class="section-title">Skills</h2>
-                        <div class="title-divider"></div>
-                
-                        <p class="left-body-text" style="color: #4a5568; text-align: justify; text-justify: inter-word; margin-bottom: 25px;">
-                            Every skill listed here represents a step in my learning journey, from my time as a student to my professional experience and personal exploration. Technology is constantly evolving, and so am I. This section will be updated from time to time as I continue to broaden my knowledge, develop new skills, and apply what I learn to real-world challenges.
-                        </p>
-
-                        <div class="skills-grid" style="justify-content: center; max-width: 100%;">
-                            <div class="skill-pill">Technical Support</div>
-
-                            <div class="skill-pill">Data Entry</div>
-                            <div class="skill-pill">Data Management</div>
-                            <div class="skill-pill">Inventory Management</div>
-                            <div class="skill-pill">Microsoft Excel</div>
-                            <div class="skill-pill">CRM Platforms (Salesforce)</div>
-                            <div class="skill-pill">Google Workspace</div>
-                            <div class="skill-pill">HTML & CSS</div>
-                            <div class="skill-pill">JavaScript</div>
-                            <div class="skill-pill">C#</div>
-                            <div class="skill-pill">Python</div>
-                            <div class="skill-pill">Java</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Tab Panel 6: Contacts View Layout -->
-                    <div id="contacts-view" class="view">
-                        <h2 class="section-title">Contacts</h2>
-                        <div class="title-divider"></div>
-
-                        <p class="left-body-text" style="font-weight: 600; color: #1a365d; margin-bottom: 25px; text-align: center !important;">
-                            Hire me? Let's get connected! Feel free to reach me on these channels below:
-                        </p>
-                        
-                        <div class="contacts-grid" style="display: flex !important; justify-content: center !important; flex-wrap: wrap !important; gap: 15px;">
-                            <a href="PORMOCILLE 2026.pdf" download="Callasandra_M_Pormocille_Resume.pdf" class="skill-pill" style="text-decoration: none; display: inline-block;">Resume</a>
-                            <a href="mailto:clsndrh@gmail.com" class="skill-pill" style="text-decoration: none; display: inline-block;">✉️ clsndrh@gmail.com</a>
-                            <a href="tel:+639202976170" class="skill-pill" style="text-decoration: none; display: inline-block;">📞 +63 920 297 6170</a>
-                            <a href="https://linkedin.com" class="skill-pill" target="_blank" style="text-decoration: none; display: inline-block;">🔗 LinkedIn</a>
-                        </div>
-                        
-                        <!-- 🟢 PLACED SAFELY INSIDE EACH TAB CONTAINER: Centered Copyright Row Label -->
-                        <p style="display: block; width: 100%; margin: 60px auto 0 auto; text-align: center !important; color: #64748b; font-size: 0.85rem; font-weight: 600; opacity: 0.7; user-select: none;">
-                            © 2026 Callasandra Pormocille. All Rights Reserved.
-                        </p>
-                    </div> <!-- Closes your #contacts-view panel safely -->
-                </div> <!-- THIS CLOSES YOUR MASTER .glass-panel WHITE CARD LAYOUT CONTAINER PERFECTLY -->
+        <!-- Custom Interactive Morphing Grid Button Assembly -->
+        <button id="globalMenuBtn" class="menu-grid-btn" onclick="toggleMenu(true)" title="Open Menu">
+            <div class="grid-row-top">
+                <div class="grid-pixel"></div>
+                <div class="grid-pixel"></div>
             </div>
-        
-            <!-- Single Page Front-End Controller Script Engine -->
-            <script>
-                // 1. Global Tab Panel Navigation Manager
-                function toggleMenu(isOpen) {
-                    const overlay = document.getElementById('navMenu');
-                    const globalMenuBtn = document.getElementById('globalMenuBtn');
-    
-                    if (overlay && globalMenuBtn) {
-                        if (isOpen) {
-                            overlay.classList.add('active');
-                            globalMenuBtn.classList.add('active-toggle'); 
-                        } else {
-                            overlay.classList.remove('active');
-                            globalMenuBtn.classList.remove('active-toggle'); 
-                        }
-                    }
-                }
+            <div class="grid-pixel-bottom"></div>
+        </button>
 
-                // Routes content switching across dashboard tabs safely
-                function navigateTo(targetViewId) {
-                    toggleMenu(false); 
-    
-                    const views = document.querySelectorAll('.view');
-                    views.forEach(v => {
-                        v.classList.remove('active');
-                        // Resets display properly so tabs can load
-                        v.style.setProperty('display', '', 'important');
-                    });
-    
-                    localStorage.setItem('portfolio_activeTab', targetViewId);
-                    setTimeout(() => {
-                        const target = document.getElementById(targetViewId);
-                        if (target) {
-                            target.classList.add('active');
-                        }
-        
-                        const globalMenuBtn = document.getElementById('globalMenuBtn');
-                        if (globalMenuBtn) {
-                            globalMenuBtn.style.display = (targetViewId === 'home-view') ? 'none' : 'flex';
-                        }
-                    }, 100);
-                }
+        <!-- Tab Panel 1: Home View Layout -->
+        <div id="home-view" class="view active">
+            <h1 class="main-title" style="text-align: center; width: 100%; color: #0c3866;">Callasandra M. Pormocille</h1>
+            
+            <div class="divider-container">
+                <div class="divider-line"></div>
+                <div class="divider-dot"></div>
+                <div class="divider-line"></div>
+            </div>
+            
+            <div class="divider-container">
+                <span class="role-badge">IT Support Specialist | Data Entry Specialist</span>
+            </div>
 
-                // 2. Project Sliding Engine (SAFE FROM BREAKING BLANK VIEWS)
-                let activeSlideIndex = 1; 
-                const maxTotalSlides = 3;
+           <p class="body-text" style="text-align: justify; text-justify: inter-word; color: #0c3866;">
+    Hi, I am <strong>Callasandra</strong> and welcome to my little sanctuary. :) Here, you can explore everything you’d like to know about me by navigating through the About Me, Experience, Skills, Projects, and Contact sections.
+</p>
 
-                function rotateProjectCardSlide(directionStep) {
-                    activeSlideIndex += directionStep;
-    
-                    if (activeSlideIndex < 1) activeSlideIndex = maxTotalSlides;
-                    if (activeSlideIndex > maxTotalSlides) activeSlideIndex = 1;
-    
-                    for (let i = 1; i <= maxTotalSlides; i++) {
-                        const targetCardNode = document.getElementById(`project-card-${i}`);
-                        if (targetCardNode) {
-                            if (i === activeSlideIndex) {
-                                targetCardNode.style.setProperty('display', 'block', 'important');
-                            } else {
-                                targetCardNode.style.setProperty('display', 'none', 'important');
-                            }
-                        }
-                    }
-                }
-
-                // --- MASTER LIFECYCLE HOOK BINDINGS PROCESS ---
-                window.addEventListener('DOMContentLoaded', () => {
-                    // Safely sets up project slides ONLY if they exist on the current page view
-                    for (let i = 1; i <= maxTotalSlides; i++) {
-                        const targetCardNode = document.getElementById(`project-card-${i}`);
-                        if (targetCardNode) {
-                            targetCardNode.style.setProperty('display', (i === 1) ? 'block' : 'none', 'important');
-                        }
-                    }
-
-                    // Fetch last-saved persistent tab snapshot from browser drawers memory keys
-                    const lastSavedTab = localStorage.getItem('portfolio_activeTab');
-                    if (lastSavedTab) {
-                        navigateTo(lastSavedTab);
-                    } else {
-                        navigateTo('home-view');
-                    }
-                });       
-            </script>
+            <div class="btn-container">
+                <button class="btn-dark" onclick="navigateTo('about-view')">
+                    <span style="font-size: 1.25rem; line-height: 1;">🎮</span> PRESS START
+                </button>
+            </div>
         </div>
+
+        <!-- Tab Panel 2: About Me View Layout -->
+        <div id="about-view" class="view">
+            <h2 class="section-title">About Me</h2>
+            <div class="title-divider"></div>
+            
+            <p class="left-body-text" style="text-align: justify; text-justify: inter-word;">
+                I am an IT graduate with over a year of hands-on experience in technical support, hardware troubleshooting, warranty operations, and IT-related administrative tasks. I also have experience in troubleshooting computer-related issues, providing technical support, and managing business data with accuracy and efficiency.
+            </p>
+            
+            <ul class="about-list">
+                <li style="text-align: justify; text-justify: inter-word; color: #0c3866;"><strong>Technical Infrastructure Support:</strong> Experienced in component diagnostics, peripheral hardware troubleshooting, and managing authorized manufacturer warranty systems.</li>
+                <li style="text-align: justify; text-justify: inter-word; color: #0c3866;"><strong>Data & Records Management:</strong> Experienced in organizing digital records, maintaining databases, and ensuring data accuracy and integrity through careful encoding and verification.</li>
+                <li style="text-align: justify; text-justify: inter-word; color: #0c3866;"><strong>Professional Drivers:</strong> I am passionate about exploring new technologies, expanding my technical knowledge, and sharing what I learn with others. As I continue to grow in the IT field, I hope to apply my skills to develop practical solutions that make a meaningful impact.</li>
+            </ul>
+
+            <div class="btn-container">
+                <a href="PORMOCILLE 2026.pdf" download="CALLASANDRA PORMOCILLE - RESUME.pdf" class="btn-dark" style="text-decoration: none;">
+                    <span style="font-size: 1.15rem; line-height: 1;">📄 Download My CV</span>
+                </a>
+            </div>
+        </div>
+        <!-- Tab Panel 3: Experience View Layout -->
+        <div id="experience-view" class="view">
+            <h2 class="section-title">Experience</h2>
+            <div class="title-divider"></div>
+            
+            <div style="margin-bottom: 30px; text-align: left;">
+                <h3 style="color: #1a365d; font-size: 1.25rem; font-weight: 700; margin-bottom: 4px;">Administrative Technical Support</h3>
+                <p style="color: #3b82f6; font-size: 1rem; font-weight: 600; margin-bottom: 8px;">MATCO Computer Corporation <span style="color: #64748b; font-weight: 400; margin-left: 5px;">| June 2025 - Present</span></p>
+               <p class="left-body-text" style="margin-bottom: 0; text-align: justify; text-justify: inter-word;">Contributed to the successful development and maintenance of the company’s website as part of a collaborative team, ensuring functionality, usability, and timely updates. Managed the EPSON Warranty Parts CRM Portal, supporting day to day operations by maintaining accurate records, monitoring portal functionality, and ensuring efficient processing and management of warranty parts information.</p>
+            </div>
+
+            <div style="margin-bottom: 10px; text-align: left;">
+                <h3 style="color: #1a365d; font-size: 1.25rem; font-weight: 700; margin-bottom: 4px;">Data Entry Specialist</h3>
+                <p style="color: #3b82f6; font-size: 1rem; font-weight: 600; margin-bottom: 8px;">Gateway Group of Companies <span style="color: #64748b; font-weight: 400; margin-left: 5px;">| March 2023 - September 2024</span></p>
+                <p class="left-body-text" style="margin-bottom: 0; text-align: justify; text-justify: inter-word;">Managed and maintained customer records by accurately encoding, updating, and verifying data to ensure accuracy and integrity. Provided timely customer support, resolved enquiries, and coordinated with internal teams to deliver efficient service. Improved workflow through organised record management and attention to detail while utilising database and Microsoft Office applications.</p>
+                <p style="color: #10b981; font-size: 0.95rem; font-weight: 600;">🏆 Recognised as one of the Top Performers on the team for two consecutive months.</p>
+            </div>
+        </div>
+
+        <!-- Tab Panel 4: Projects View Layout -->
+        <div id="projects-view" class="view">
+            <h2 class="section-title">Projects</h2>
+            <div class="title-divider"></div>
+            
+            <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
+                <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
+                    🎓 Capstone Project
+                </span>
+                
+                <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
+                    PREPLUS: An Online Gym Information System with Forecasting Technology for Fitness Academy – Malabon
+                </h3>
+                
+                <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
+                    ⭐ Project Leader
+                </p>
+                
+                <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
+                    Led a collaborative development team throughout the deployment of a structural information system. Coordinated project timelines, assigned tasks, designed database entity structures, and reviewed code quality to help the team achieve a successful system defense evaluation.
+                </p>
+
+                <ul class="about-list" style="margin-bottom: 25px;">
+                    <li><strong>Front-End Development:</strong> Developed the front-end interface of the web-based information system.</li>
+                    <li><strong>Technical Documentation:</strong> Prepared and managed the project's technical documentation, including the thesis manuscript and system documentation.</li>
+                    <li><strong>Team Collaboration:</strong> Collaborated with team members throughout the development, testing, and presentation phases.</li>
+                </ul>
+
+                <!-- Capstone Screenshot Grid Layout -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; width: 100%; margin-top: 15px;">
+                    <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center;">
+                        <img src="PREPLUS ONE.png" alt="Home Page" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
+                        <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Home Page</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PERSONAL PROJECT ENTRY: CORALINE DIGITAL APP -->
+            <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px; margin-top: 25px;">
+                <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
+                    🎨 Personal Project
+                </span>
+                
+                <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
+                    IP-Themed Interactive Website
+                </h3>
+                
+                <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
+                    ⭐ Personal Design & Front-End Development
+                </p>
+        
+                <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
+                    Designed and developed a custom single-page interactive website inspired by the film Coraline as a personalized digital gift. Developed a five-level riddle challenge using conditional logic to unlock content sequentially and implemented a dynamic photo slideshow, delivering an immersive and interactive user experience.
+                </p>
+                
+                <ul class="about-list" style="margin-bottom: 25px;">
+                    <li><strong>Interactive Mini-Games:</strong> Developed a five-level text-matching game that progressively unlocked sections of the application based on user input.</li>
+                    <li><strong>Digital Scrapbook Gallery:</strong> Created a responsive image gallery with a multi-page sliding interface for displaying custom photo collections.</li>
+                    <li><strong>Custom UI Design:</strong> Designed and implemented a dark-themed user interface with custom typography, refined font styling, and clean border elements to enhance the overall user experience.</li>
+                </ul>
+                
+                <!-- CORALINE IMAGE DISPLAY SCREENSHOT -->
+                <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center; max-width: 100%; margin-top: 15px;">
+                    <img src="home page.png" alt="Coraline Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
+                    <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coraline Themed Home Page</span>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Tab Panel 5: Skills View Layout -->
+            <div id="skills-view" class="view">
+                <h2 class="section-title">Skills</h2>
+                <div class="title-divider"></div>
+                
+                <p class="left-body-text" style="color: #4a5568; text-align: justify; text-justify: inter-word; margin-bottom: 25px;">
+                    Every skill listed here represents a step in my learning journey, from my time as a student to my professional experience and personal exploration. Technology is constantly evolving, and so am I. This section will be updated from time to time as I continue to broaden my knowledge, develop new skills, and apply what I learn to real-world challenges.
+                </p>
+
+                <div class="skills-grid" style="justify-content: center; max-width: 100%;">
+                    <div class="skill-pill">Technical Support</div>
+                    <div class="skill-pill">Data Entry</div>
+                    <div class="skill-pill">Data Management</div>
+                    <div class="skill-pill">Inventory Management</div>
+                    <div class="skill-pill">Microsoft Excel</div>
+                    <div class="skill-pill">CRM Platforms (Salesforce)</div>
+                    <div class="skill-pill">Google Workspace</div>
+                    <div class="skill-pill">HTML & CSS</div>
+                    <div class="skill-pill">JavaScript</div>
+                    <div class="skill-pill">C#</div>
+                    <div class="skill-pill">Python</div>
+                    <div class="skill-pill">Java</div>
+                </div>
+            </div>
+            
+            <!-- Tab Panel 6: Contacts View Layout -->
+            <div id="contacts-view" class="view">
+                <h2 class="section-title">Contacts</h2>
+                <div class="title-divider"></div>
+        
+                <p class="left-body-text" style="font-weight: 600; color: #1a365d; margin-bottom: 25px;">
+                    Hire me? Let's get connected! Feel free to reach me on these channels below:
+                </p>
+            
+                <div class="contacts-grid">
+                    <a href="PORMOCILLE 2026.pdf" download="Callasandra_M_Pormocille_Resume.pdf" class="skill-pill" style="text-decoration: none; display: inline-block;">📄 Download CV (PDF)</a>
+                    <a href="mailto:clsndrh@gmail.com" class="skill-pill" style="text-decoration: none; display: inline-block;">✉️ clsndrh@gmail.com</a>
+                    <a href="tel:+639202976170" class="skill-pill" style="text-decoration: none; display: inline-block;">📞 +63 920 297 6170</a>
+                    <a href="https://www.linkedin.com/in/tbnzp/" class="skill-pill" target="_blank" style="text-decoration: none; display: inline-block;">🔗 LinkedIn Profile</a>
+                </div>
+            </div> <!-- Closes your contacts-grid -->
+    </div> <!-- Closes your #contacts-view panel safely --> 
+    
+    <!-- Elegant External Footer Label (With absolute centering rules applied directly to it) -->
+        <p style="display: block; width: fit-content; max-width: 90%; margin: 30px auto 0 auto; text-align: center; color: #0c3866; font-size: 0.85rem; font-weight: 600; opacity: 0.75; letter-spacing: 0.5px; pointer-events: none; clear: both; box-sizing: border-box;">
+            © 2026 Callasandra Pormocille. All Rights Reserved.
+        </p>
+    
+    </div> <!-- Closes your .glass-panel container card perfectly -->
+    
+                <!-- Single Page Front-End Controller Script Engine -->
+    <script>
+        function toggleMenu(isOpen) {
+                const overlay = document.getElementById('navMenu');
+                const globalMenuBtn = document.getElementById('globalMenuBtn');
+                
+                if (isOpen) {
+                    overlay.classList.add('active');
+                    globalMenuBtn.classList.add('active-toggle'); 
+                } else {
+                    overlay.classList.remove('active');
+                    globalMenuBtn.classList.remove('active-toggle'); 
+                }
+            }
+        
+        function navigateTo(targetViewId) {
+            toggleMenu(false); 
+            
+            const views = document.querySelectorAll('.view');
+            views.forEach(v => {
+                v.classList.remove('active');
+            });
+            
+            // SAVE ACTIVE VIEW SLOT TO BROWSER MEMORY
+            localStorage.setItem('portfolio_activeTab', targetViewId);
+            
+            setTimeout(() => {
+                const target = document.getElementById(targetViewId);
+                if (target) {
+                    target.classList.add('active');
+                }
+                
+                const globalMenuBtn = document.getElementById('globalMenuBtn');
+                if (targetViewId === 'home-view') {
+                    globalMenuBtn.style.display = 'none'; 
+                } else {
+                    globalMenuBtn.style.display = 'flex'; 
+                }
+            }, 100);
+        }
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            // Read the last visited tab name from browser memory drawers
+            const lastSavedTab = localStorage.getItem('portfolio_activeTab');
+            
+            // If a saved state exists, snap right back to it instantly!
+            if (lastSavedTab) {
+                navigateTo(lastSavedTab);
+            } else {
+                // Fallback default navigation onto your clean home view landing screen
+                navigateTo('home-view');
+            }
+        });
+    </script>
+</div>
 </body>
 </html>
