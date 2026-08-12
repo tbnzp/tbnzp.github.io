@@ -38,7 +38,7 @@
         }, 100);
     }
 
-    // --- 2. NEW DYNAMIC SLIDING CARDS NAVIGATION MECHANICS ---
+        // --- 2. DYNAMIC SLIDING CARDS NAVIGATION MECHANICS (FIXED FOR INLINE STYLES) ---
     let currentProjectIndex = 0;
 
     function initializeProjectSliderEngine() {
@@ -51,14 +51,30 @@
         function renderActiveProjectCard() {
             projectCards.forEach((card, index) => {
                 if (index === currentProjectIndex) {
-                    card.style.display = 'block';
+                    // Overrides the hidden inline styles safely
+                    card.style.setProperty('display', 'block', 'important');
                     card.classList.add('active-project');
                 } else {
-                    card.style.display = 'none';
+                    card.style.setProperty('display', 'none', 'important');
                     card.classList.remove('active-project');
                 }
             });
         }
+
+        // Add event listeners for button click navigation loops
+        prevBtn.addEventListener('click', () => {
+            currentProjectIndex = (currentProjectIndex === 0) ? projectCards.length - 1 : currentProjectIndex - 1;
+            renderActiveProjectCard();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentProjectIndex = (currentProjectIndex === projectCards.length - 1) ? 0 : currentProjectIndex + 1;
+            renderActiveProjectCard();
+        });
+
+        // Initialize the view state right away
+        renderActiveProjectCard();
+    }
 
         // Loop navigation back around if crossing boundaries
         prevBtn.addEventListener('click', () => {
