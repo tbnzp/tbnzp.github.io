@@ -38,7 +38,7 @@
         }, 100);
     }
 
-        // --- 2. DYNAMIC SLIDING CARDS NAVIGATION MECHANICS (FIXED FOR INLINE STYLES) ---
+         // --- DYNAMIC SLIDING CARDS NAVIGATION MECHANICS ---
     let currentProjectIndex = 0;
 
     function initializeProjectSliderEngine() {
@@ -46,46 +46,39 @@
         const prevBtn = document.getElementById('prevProjectBtn');
         const nextBtn = document.getElementById('nextProjectBtn');
 
+        // Safety fallback check to ensure buttons and elements exist
         if (!projectCards.length || !prevBtn || !nextBtn) return;
 
         function renderActiveProjectCard() {
             projectCards.forEach((card, index) => {
                 if (index === currentProjectIndex) {
-                    // Overrides the hidden inline styles safely
+                    // Force the card open safely, overriding any other CSS styles
                     card.style.setProperty('display', 'block', 'important');
-                    card.classList.add('active-project');
+                    card.style.setProperty('visibility', 'visible', 'important');
+                    card.style.setProperty('opacity', '1', 'important');
                 } else {
+                    // Hide the inactive card completely
                     card.style.setProperty('display', 'none', 'important');
-                    card.classList.remove('active-project');
                 }
             });
         }
 
-        // Add event listeners for button click navigation loops
-        prevBtn.addEventListener('click', () => {
+        // Previous Button Click event loop
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             currentProjectIndex = (currentProjectIndex === 0) ? projectCards.length - 1 : currentProjectIndex - 1;
             renderActiveProjectCard();
         });
 
-        nextBtn.addEventListener('click', () => {
+        // Next Button Click event loop
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             currentProjectIndex = (currentProjectIndex === projectCards.length - 1) ? 0 : currentProjectIndex + 1;
             renderActiveProjectCard();
         });
 
-        // Initialize the view state right away
+        // Initialize base view layout right away on page bootup
         renderActiveProjectCard();
-    }
-
-        // Loop navigation back around if crossing boundaries
-        prevBtn.addEventListener('click', () => {
-            currentProjectIndex = (currentProjectIndex === 0) ? projectCards.length - 1 : currentProjectIndex - 1;
-            renderActiveProjectCard();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentProjectIndex = (currentProjectIndex === projectCards.length - 1) ? 0 : currentProjectIndex + 1;
-            renderActiveProjectCard();
-        });
     }
 
     // --- 3. BROWSER LIFECYCLE ROUTINE SETUP ---
