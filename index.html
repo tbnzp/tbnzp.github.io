@@ -629,17 +629,18 @@
                     <a href="https://www.linkedin.com/in/tbnzp/" class="skill-pill" target="_blank" style="text-decoration: none; display: inline-block;">🔗 LinkedIn Profile</a>
                 </div>
             </div> <!-- Closes your contacts-grid -->
-    </div> <!-- Closes your #contacts-view panel safely -->
+    
+        </div> <!-- Closes your #contacts-view panel safely -->
     </div> <!-- Closes your .glass-panel container card perfectly -->
     
-    <!-- Elegant External Footer Label (With absolute centering rules applied directly to it) -->
+        <!-- Elegant External Footer Label (With absolute centering rules applied directly to it) -->
         <p style="display: block; width: fit-content; max-width: 90%; margin: 30px auto 0 auto; text-align: center; color: #0c3866; font-size: 0.85rem; font-weight: 600; opacity: 0.75; letter-spacing: 0.5px; pointer-events: none; clear: both; box-sizing: border-box;">
             © 2026 Callasandra Pormocille. All Rights Reserved.
         </p>
     
                 <!-- Single Page Front-End Controller Script Engine -->
-    <script>
-        function toggleMenu(isOpen) {
+        <script>
+            function toggleMenu(isOpen) {
                 const overlay = document.getElementById('navMenu');
                 const globalMenuBtn = document.getElementById('globalMenuBtn');
                 
@@ -652,45 +653,45 @@
                 }
             }
         
-        function navigateTo(targetViewId) {
-            toggleMenu(false); 
+            function navigateTo(targetViewId) {
+                toggleMenu(false); 
             
-            const views = document.querySelectorAll('.view');
-            views.forEach(v => {
-                v.classList.remove('active');
-            });
+                const views = document.querySelectorAll('.view');
+                views.forEach(v => {
+                    v.classList.remove('active');
+                });
             
-            // SAVE ACTIVE VIEW SLOT TO BROWSER MEMORY
-            localStorage.setItem('portfolio_activeTab', targetViewId);
+                // SAVE ACTIVE VIEW SLOT TO BROWSER MEMORY
+                localStorage.setItem('portfolio_activeTab', targetViewId);
             
-            setTimeout(() => {
-                const target = document.getElementById(targetViewId);
-                if (target) {
-                    target.classList.add('active');
-                }
+                setTimeout(() => {
+                    const target = document.getElementById(targetViewId);
+                    if (target) {
+                        target.classList.add('active');
+                    }
                 
-                const globalMenuBtn = document.getElementById('globalMenuBtn');
-                if (targetViewId === 'home-view') {
-                    globalMenuBtn.style.display = 'none'; 
-                } else {
-                    globalMenuBtn.style.display = 'flex'; 
-                }
-            }, 100);
-        }
-        
-        window.addEventListener('DOMContentLoaded', () => {
-            // Read the last visited tab name from browser memory drawers
-            const lastSavedTab = localStorage.getItem('portfolio_activeTab');
-            
-            // If a saved state exists, snap right back to it instantly!
-            if (lastSavedTab) {
-                navigateTo(lastSavedTab);
-            } else {
-                // Fallback default navigation onto your clean home view landing screen
-                navigateTo('home-view');
+                    const globalMenuBtn = document.getElementById('globalMenuBtn');
+                    if (targetViewId === 'home-view') {
+                        globalMenuBtn.style.display = 'none'; 
+                    } else {
+                        globalMenuBtn.style.display = 'flex'; 
+                    }
+                }, 100);
             }
-        });
-    </script>
-</div>
+        
+            window.addEventListener('DOMContentLoaded', () => {
+                // Read the last visited tab name from browser memory drawers
+                const lastSavedTab = localStorage.getItem('portfolio_activeTab');
+            
+                // If a saved state exists, snap right back to it instantly!
+                if (lastSavedTab) {
+                    navigateTo(lastSavedTab);
+                } else {
+                    // Fallback default navigation onto your clean home view landing screen
+                    navigateTo('home-view');
+                }
+            });
+        </script>
+    </div>
 </body>
 </html>
