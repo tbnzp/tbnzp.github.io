@@ -1,5 +1,4 @@
  <!-- Single Page Front-End Controller Script Engine -->
-    <script>
         function toggleMenu(isOpen) {
                 const overlay = document.getElementById('navMenu');
                 const globalMenuBtn = document.getElementById('globalMenuBtn');
