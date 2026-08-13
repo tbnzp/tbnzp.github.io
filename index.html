@@ -530,7 +530,7 @@
                     <h2 class="section-title">Projects</h2>
                     <div class="title-divider"></div>
     
-                    <!-- CARD CONTAINER 1: CAPSTONE PROJECT (Visible on Load) -->
+                    <!-- Card Container 1: Capstone Project (Visible on Load) -->
                     <div id="project-card-1" style="display: block; text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
                         <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
                             🎓 Capstone Project
@@ -563,7 +563,7 @@
                         </div>
                     </div>
 
-                    <!-- CARD CONTAINER 2: CORALINE DIGITAL APP (Hidden on Load) -->
+                    <!-- Card Container 2: Coraline Themed Website (Hidden on Load) -->
                     <div id="project-card-2" style="display: none; text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
                         <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
                             🎨 Personal Project
@@ -587,29 +587,66 @@
                             <li><strong>Custom UI Design:</strong> Designed and implemented a dark-themed user interface with custom typography, refined font styling, and clean border elements to enhance the overall user experience.</li>
                         </ul>
                 
-                        <!-- CORALINE IMAGE DISPLAY SCREENSHOT -->
+                        <!-- Coraline Image Display Screenshot -->
                         <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center; max-width: 100%; margin-top: 15px;">
                             <img src="home page.png" alt="Coraline Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;"> <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coraline Themed Home Page</span>
                         </div>
                     </div>
                     
-                    <!-- HIGH-UTILITY CHEVRON BUTTON ROW PANEL (Dark Navy Theme) -->
-                    <div class="project-nav-control-bar" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 35px; user-select: none;">
-        
-                        <!-- BACK BUTTON: Dark navy squircle with a clean black border outline -->
-                        <button id="prevProjectBtn" 
-                            onclick="document.getElementById('project-card-1').style.setProperty('display', 'block', 'important'); document.getElementById('project-card-2').style.setProperty('display', 'none', 'important');" 
-                            style="background-color: #0b2240; border: 2px solid #000000; width: 50px; height: 50px; border-radius: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
-                            <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; color: #ffffff; transform: rotate(180deg);"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </button>
-        
-                        <!-- NEXT BUTTON: Solid dark navy squircle with a smooth drop shadow -->
-                        <button id="nextProjectBtn" 
-                            onclick="document.getElementById('project-card-1').style.setProperty('display', 'none', 'important'); document.getElementById('project-card-2').style.setProperty('display', 'block', 'important');" 
-                            style="background-color: #0b2240; border: none; width: 50px; height: 50px; border-radius: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(11, 34, 64, 0.35);">
-                            <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; color: #ffffff;"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        </button>
+                    <!-- Card Container 3: Birthday Website Template -->
+                    <div id="project-card-2" style="display: none; text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
+                        <span style="font-size: 0.8rem; background-color: #fce7f3; color: #9c4d62; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
+                            🎨 Personal Project
+                        </span>
+    
+                        <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
+                            Birthday Interactive Website Template
+                        </h3>
+    
+                        <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
+                            ⭐ Personal Design & Front-End Development
+                        </p>
+
+                        <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
+                            Designed and developed a highly interactive, self-contained single-page web animation greeting using vanilla web technologies. Features a modern soft pastel pink color scheme combined with a procedural CSS drop-and-stack layer system, a natural flickering candle fire effect, and looping background ambient particle generations.
+                        </p>
+    
+                        <ul class="about-list" style="margin-bottom: 25px; padding-left: 20px; text-align: left;">
+                            <li style="margin-bottom: 10px; text-align: justify; padding-left: 5px;">
+                                <strong>Choreographed Layer Animations:</strong> Programmed a sequential cubic-bezier timing delay system that accurately simulates 3D cake blocks stacking on page load.
+                            </li>
+                            <li style="margin-bottom: 10px; text-align: justify; padding-left: 5px;">
+                                <strong>Micro-Interactivity:</strong> Implemented an atomic click event listener to safely mutate DOM styling values, instantly extinguishing the candle flame while generating custom multi-line wishing messages.
+                            </li>
+                            <li style="margin-bottom: 10px; text-align: justify; padding-left: 5px;">
+                                <strong>Dynamic Background Generation:</strong> Coded an automated runtime script factory that continuously spawns subtle floating heart particles across randomized coordinates and opacities.
+                            </li>
+                        </ul>
+                        
+                        <!-- Coraline Image Display Screenshot -->
+                        <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center;">
+                            <img src="hbd.png" alt="Birthday Cake Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;"> 
+                            <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Cake Animation Template</span>
+                        </div>
                     </div>
+                </div>
+                
+                <!-- HIGH-UTILITY CHEVRON BUTTON ROW PANEL (Automated 3-Card Slider Interface Engine) -->
+                <div class="project-nav-control-bar" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 35px; user-select: none;">
+    
+                    <!-- BACK BUTTON: Updates loop tracking parameters to cycle through 3 distinct targets -->
+                    <button id="prevProjectBtn" 
+                        onclick="rotateProjectCardSlide(-1);" 
+                        style="background-color: #0b2240; border: 2px solid #000000; width: 50px; height: 50px; border-radius: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
+                        <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; color: #ffffff; transform: rotate(180deg);"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                    
+                    <!-- NEXT BUTTON: Updates loop tracking parameters to cycle through 3 distinct targets -->
+                    <button id="nextProjectBtn" 
+                        onclick="rotateProjectCardSlide(1);" 
+                        style="background-color: #0b2240; border: none; width: 50px; height: 50px; border-radius: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(11, 34, 64, 0.35);">
+                        <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; color: #ffffff;"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </button>  
                 </div>
 
                     <!-- Tab Panel 5: Skills View Layout -->
@@ -694,6 +731,27 @@
                             globalMenuBtn.style.display = 'flex'; 
                         }
                     }, 100);
+                }
+                
+                let activeSlideIndex = 1;
+                const maxTotalSlides = 2; // Keeps it at 2 cards since the cake is inside Card 2!
+                
+                function rotateProjectCardSlide(directionStep) {
+                    activeSlideIndex += directionStep;
+                              
+                    if (activeSlideIndex < 1) activeSlideIndex = maxTotalSlides;
+                    if (activeSlideIndex > maxTotalSlides) activeSlideIndex = 1;
+                    
+                    for (let i = 1; i <= maxTotalSlides; i++) {
+                        const targetCardNode = document.getElementById(`project-card-${i}`);
+                        if (targetCardNode) {
+                            if (i === activeSlideIndex) {
+                                targetCardNode.style.setProperty('display', 'block', 'important');
+                            } else {
+                                targetCardNode.style.setProperty('display', 'none', 'important');
+                            }          
+                        }            
+                    }        
                 }
         
                 window.addEventListener('DOMContentLoaded', () => {
