@@ -732,27 +732,6 @@
                         }
                     }, 100);
                 }
-                
-                let activeSlideIndex = 1;
-                const maxTotalSlides = 2; // Keeps it at 2 cards since the cake is inside Card 2!
-                
-                function rotateProjectCardSlide(directionStep) {
-                    activeSlideIndex += directionStep;
-                              
-                    if (activeSlideIndex < 1) activeSlideIndex = maxTotalSlides;
-                    if (activeSlideIndex > maxTotalSlides) activeSlideIndex = 1;
-                    
-                    for (let i = 1; i <= maxTotalSlides; i++) {
-                        const targetCardNode = document.getElementById(`project-card-${i}`);
-                        if (targetCardNode) {
-                            if (i === activeSlideIndex) {
-                                targetCardNode.style.setProperty('display', 'block', 'important');
-                            } else {
-                                targetCardNode.style.setProperty('display', 'none', 'important');
-                            }          
-                        }            
-                    }        
-                }
         
                 window.addEventListener('DOMContentLoaded', () => {
                     // Read the last visited tab name from browser memory drawers
