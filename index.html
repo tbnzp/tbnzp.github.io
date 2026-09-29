@@ -614,60 +614,118 @@
                     </div> <!-- Closes your contacts-grid -->
                 </div> <!-- Closes your .glass-panel class safely --> 
             </div> <!-- Closes your .glass-panel container card perfectly -->
-    
-            <!-- Single Page Front-End Controller Script Engine -->
-            <script>
-                function toggleMenu(isOpen) {
-                    const overlay = document.getElementById('navMenu');
-                    const globalMenuBtn = document.getElementById('globalMenuBtn');
-                
-                    if (isOpen) {
-                        overlay.classList.add('active');
-                        globalMenuBtn.classList.add('active-toggle'); 
-                    } else {
-                        overlay.classList.remove('active');
-                        globalMenuBtn.classList.remove('active-toggle'); 
-                    }
-                }
         
-                function navigateTo(targetViewId) {
-                    toggleMenu(false); 
-            
-                    const views = document.querySelectorAll('.view');
-                    views.forEach(v => {
-                        v.classList.remove('active');
-                    });
-            
-                    // SAVE ACTIVE VIEW SLOT TO BROWSER MEMORY
-                    localStorage.setItem('portfolio_activeTab', targetViewId);
-            
-                    setTimeout(() => {
-                        const target = document.getElementById(targetViewId);
-                        if (target) {
-                            target.classList.add('active');
-                        }
+        <!-- Single Page Front-End Controller Script Engine -->
+        <script> 
+            function toggleMenu(isOpen) {
+                const overlay = document.getElementById('navMenu');
+                const globalMenuBtn = document.getElementById('globalMenuBtn');
                 
-                        const globalMenuBtn = document.getElementById('globalMenuBtn');                
-                        if (targetViewId === 'home-view') {
-                            globalMenuBtn.style.display = 'none'; 
-                        } else {
-                            globalMenuBtn.style.display = 'flex'; 
-                        }
-                    }, 100);
+                if (isOpen) {
+                    overlay.classList.add('active');
+                    globalMenuBtn.classList.add('active-toggle');
+                } else {
+                    overlay.classList.remove('active');
+                    globalMenuBtn.classList.remove('active-toggle');
                 }
-        
-                window.addEventListener('DOMContentLoaded', () => {
-                    // Read the last visited tab name from browser memory drawers
-                    const lastSavedTab = localStorage.getItem('portfolio_activeTab');
-            
-                    // If a saved state exists, snap right back to it instantly!
-                    if (lastSavedTab) {
-                        navigateTo(lastSavedTab);
-                    } else {
-                        // Fallback default navigation onto your clean home view landing screen
-                        navigateTo('home-view');
-                    }
+            }
+
+            function navigateTo(targetViewId) {
+                toggleMenu(false);
+
+                const views = document.querySelectorAll('.view');
+                views.forEach(v => {
+                    v.classList.remove('active');
                 });
+
+                // SAVE ACTIVE VIEW SLOT TO BROWSER MEMORY
+                localStorage.setItem('portfolio_activeTab', targetViewId);
+
+                setTimeout(() => {
+                    const target = document.getElementById(targetViewId);
+                    if (target) {
+                        target.classList.add('active');
+                    }
+
+                    const globalMenuBtn = document.getElementById('globalMenuBtn');
+                    if (targetViewId === 'home-view') {
+                        globalMenuBtn.style.display = 'none';
+                    } else {
+                        globalMenuBtn.style.display = 'flex';
+                    }
+                }, 100);
+            }
+
+            window.addEventListener('DOMContentLoaded', () => {
+                // Read the last visited tab name from browser memory drawers
+                const lastSavedTab = localStorage.getItem('portfolio_activeTab');
+
+                // If a saved state exists, snap right back to it instantly!
+                if (lastSavedTab) {
+                    navigateTo(lastSavedTab);
+                } else {
+                    // Fallback default navigation onto your clean home view landing screen
+                    navigateTo('home-view');
+                }
+
+                // ==========================================
+                // 🎠 PROJECTS VIEW CAROUSEL CONTROLLER ENGINE
+                // ==========================================
+                const track = document.querySelector(".carousel-track");
+                const slides = document.querySelectorAll(".carousel-slide");
+                const nextButton = document.getElementById("nextBtn");
+                const prevButton = document.getElementById("prevBtn");
+                const dots = document.querySelectorAll(".dot");
+        
+                // Only run carousel initialization if the structural elements exist in the DOM
+                if (track && slides.length > 0) {
+                    let currentIndex = 0;
+
+                    function updateCarousel(index) {
+                        // Shift slide container via 100% viewport width offsets
+                        track.style.transform = `translateX(-${index * 100}%)`;
+                        currentIndex = index;
+
+                        // Sync dot indicators styles
+                        if (dots.length > 0) {
+                            dots.forEach((dot, idx) => {
+                                if (idx === index) {
+                                    dot.style.backgroundColor = "#1a365d";
+                                    dot.style.opacity = "1";
+                                } else {
+                                    dot.style.backgroundColor = "#cbd5e1";
+                                    dot.style.opacity = "0.5";
+                                }
+                            });
+                        }
+                    }
+
+                    if (nextButton) {
+                        nextButton.addEventListener("click", () => {
+                            let nextIndex = currentIndex + 1;
+                            if (nextIndex >= slides.length) nextIndex = 0; // Loop back to start panel
+                            updateCarousel(nextIndex);
+                        });
+                    }
+
+                    if (prevButton) {
+                        prevButton.addEventListener("click", () => {
+                            let prevIndex = currentIndex - 1;
+                            if (prevIndex < 0) prevIndex = slides.length - 1; // Reverse loop back to end panel
+                            updateCarousel(prevIndex);
+                        });
+                    }
+
+                    if (dots.length > 0) {
+                        dots.forEach((dot) => {
+                            dot.addEventListener("click", (e) => {
+                                const targetIndex = parseInt(e.target.getAttribute("data-index"));
+                                updateCarousel(targetIndex);
+                            });
+                        });
+                    }
+                }
+            });
             </script>
         </div>
     </body>
