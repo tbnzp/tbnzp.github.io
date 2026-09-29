@@ -503,73 +503,102 @@
                         </div>
                     </div>
 
-                    <!-- Tab Panel 4: Projects View Layout -->
-                    <div id="projects-view" class="view">
-                        <h2 class="section-title">Projects</h2>
-                        <div class="title-divider"></div>
-            
-                        <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
-                            <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
-                                🎓 Capstone Project
-                            </span>
-                
-                            <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
-                                PREPLUS: An Online Gym Information System with Forecasting Technology for Fitness Academy – Malabon
-                            </h3>
-                                <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
-                                    ⭐ Project Leader
-                                </p>
-                
-                            <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
-                                Led a collaborative development team throughout the deployment of a structural information system. Coordinated project timelines, assigned tasks, designed database entity structures, and reviewed code quality to help the team achieve a successful system defense evaluation.
-                            </p>
+ <!-- Tab Panel 4: Projects View Layout -->
+<div id="projects-view" class="view">
+    <h2 class="section-title">Projects</h2>
+    <div class="title-divider"></div>
 
-                            <ul class="about-list" style="margin-bottom: 25px;">
-                                <li><strong>Front-End Development:</strong> Developed the front-end interface of the web-based information system.</li>
-                                <li><strong>Technical Documentation:</strong> Prepared and managed the project's technical documentation, including the thesis manuscript and system documentation.</li>
-                                <li><strong>Team Collaboration:</strong> Collaborated with team members throughout the development, testing, and presentation phases.</li>
-                            </ul>
-
-                            <!-- Capstone Screenshot Grid Layout -->
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; width: 100%; margin-top: 15px;">
-                                <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center;">
-                                    <img src="PREPLUS ONE.png" alt="Home Page" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
-                                    <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Home Page</span>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- PERSONAL PROJECT ENTRY: CORALINE DIGITAL APP -->
-                        <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px; margin-top: 25px;">
-                            <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
-                                🎨 Personal Project
-                            </span>
-                
-                            <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
-                                IP-Themed Interactive Website
-                            </h3>
-                
-                            <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
-                                ⭐ Personal Design & Front-End Development                
-                            </p>
+    <!-- 1. The Carousel Window Wrapper (Keeps items clipped inside) -->
+    <div class="carousel-container" style="position: relative; width: 100%; max-width: 100%; margin: 0 auto; overflow: hidden; padding-bottom: 20px;">
         
-                            <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
-                                Designed and developed a custom single-page interactive website inspired by the film Coraline as a personalized digital gift. Developed a five-level riddle challenge using conditional logic to unlock content sequentially and implemented a dynamic photo slideshow, delivering an immersive and interactive user experience.
-                            </p>
-                
-                            <ul class="about-list" style="margin-bottom: 25px;">
-                                <li><strong>Interactive Mini-Games:</strong> Developed a five-level text-matching game that progressively unlocked sections of the application based on user input.</li>
-                                <li><strong>Digital Scrapbook Gallery:</strong> Created a responsive image gallery with a multi-page sliding interface for displaying custom photo collections.</li>
-                                <li><strong>Custom UI Design:</strong> Designed and implemented a dark-themed user interface with custom typography, refined font styling, and clean border elements to enhance the overall user experience.</li>
-                            </ul>
-                
-                            <!-- CORALINE IMAGE DISPLAY SCREENSHOT -->
-                            <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center; max-width: 100%; margin-top: 15px;">
-                                <img src="home page.png" alt="Coraline Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
-                                <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coraline Themed Home Page</span>
-                            </div>
+        <!-- 2. The Slider Track (Forces horizontal alignment) -->
+        <div class="carousel-track" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; transition: transform 0.5s ease-in-out; width: 200%;">
+            
+            <!-- SLIDE 1: CAPSTONE PROJECT -->
+            <div class="carousel-slide" style="width: 50% !important; min-width: 50% !important; flex: 0 0 50% !important; box-sizing: border-box; padding: 5px;">
+                <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
+                    <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
+                        🎓 Capstone Project
+                    </span>
+
+                    <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
+                        PREPLUS: An Online Gym Information System with Forecasting Technology for Fitness Academy - Malabon
+                    </h3>
+                    
+                    <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
+                        ⭐ Project Leader
+                    </p>
+
+                    <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
+                        Led a collaborative development team throughout the deployment of a structural information system. Coordinated project timelines, assigned tasks, designed database entity structures, and reviewed code quality to help the team achieve a successful system defense evaluation.
+                    </p>
+
+                    <ul class="about-list" style="margin-bottom: 25px;">
+                        <li><strong>Front-End Development:</strong> Developed the front-end interface of the web-based information system.</li>
+                        <li><strong>Technical Documentation:</strong> Prepared and managed the project's technical documentation, including the thesis manuscript and system documentation.</li>
+                        <li><strong>Team Collaboration:</strong> Collaborated with team members throughout the development, testing, and presentation phases.</li>
+                    </ul>
+
+                    <!-- Capstone Screenshot Grid Layout -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; width: 100%; margin-top: 15px;">
+                        <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center;">
+                            <img src="PREPLUS ONE.png" alt="Home Page" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
+                            <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Home Page</span>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: PERSONAL PROJECT -->
+            <div class="carousel-slide" style="width: 50% !important; min-width: 50% !important; flex: 0 0 50% !important; box-sizing: border-box; padding: 5px;">
+                <div style="text-align: left; background-color: #f8fafc; border: 1px dashed #cbd5e1; padding: 25px; border-radius: 16px;">
+                    <span style="font-size: 0.8rem; background-color: #e2eefc; color: #1a365d; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">
+                        🔮 Personal Project
+                    </span>
+
+                    <h3 style="color: #1a365d; font-size: 1.3rem; font-weight: 700; margin: 10px 0 4px 0;">
+                        IP-Themed Interactive Website
+                    </h3>
+
+                    <p style="color: #3b82f6; font-size: 0.95rem; font-weight: 600; margin-bottom: 15px;">
+                        ⭐ Personal Design & Front-End Development
+                    </p>
+
+                    <p class="left-body-text" style="font-size: 1rem; margin-bottom: 20px; text-align: justify; text-justify: inter-word;">
+                        Designed and developed a custom single-page interactive website inspired by the film Coraline as a personalized digital gift. Developed a five-level riddle challenge using conditional logic to unlock content sequentially and implemented a dynamic photo slideshow, delivering an immersive and interactive user experience.
+                    </p>
+
+                    <ul class="about-list" style="margin-bottom: 25px;">
+                        <li><strong>Interactive Mini-Games:</strong> Developed a five-level text-matching game that progressively unlocked sections of the application based on user input.</li>
+                        <li><strong>Digital Scrapbook Gallery:</strong> Created a responsive image gallery with a multi-page sliding interface for displaying custom photo collections.</li>
+                        <li><strong>Custom UI Design:</strong> Designed and implemented a dark-themed user interface with custom typography, refined font styling, and clean border elements to enhance the overall user experience.</li>
+                    </ul>
+
+                    <!-- Coraline Image Display Screenshot -->
+                    <div style="background: #ffffff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #edf2f7; text-align: center; margin-top: 15px;">
+                        <img src="home page.png" alt="Coraline Project View" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 8px; object-fit: cover;">
+                        <span style="font-size: 0.75rem; color: #64748b; font-weight: 600;">Coraline Themed Home Page</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 3. Navigation Arrow Controls -->
+        <button id="prevBtn" style="position: absolute; top: 40%; left: 15px; transform: translateY(-50%); background: rgba(26, 54, 93, 0.85); color: white; border: none; padding: 14px 18px; font-size: 1.3rem; border-radius: 50%; cursor: pointer; z-index: 100; transition: 0.2s;">
+            &#10094;
+        </button>
+        <button id="nextBtn" style="position: absolute; top: 40%; right: 15px; transform: translateY(-50%); background: rgba(26, 54, 93, 0.85); color: white; border: none; padding: 14px 18px; font-size: 1.3rem; border-radius: 50%; cursor: pointer; z-index: 100; transition: 0.2s;">
+            &#10095;
+        </button>
+
+        <!-- 4. Pagination Dots -->
+        <div style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 10px; position: relative; z-index: 99;">
+            <span class="dot active" data-index="0" style="height: 12px; width: 12px; background-color: #1a365d; border-radius: 50%; display: inline-block; cursor: pointer; transition: 0.3s; opacity: 1;"></span>
+            <span class="dot" data-index="1" style="height: 12px; width: 12px; background-color: #cbd5e1; border-radius: 50%; display: inline-block; cursor: pointer; transition: 0.3s; opacity: 0.5;"></span>
+        </div>
+    </div>
+</div>
 
                     <!-- Tab Panel 5: Skills View Layout -->
                     <div id="skills-view" class="view">
